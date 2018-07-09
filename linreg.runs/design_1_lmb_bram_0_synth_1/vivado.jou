@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sun Jul  8 19:38:04 2018
+# Process ID: 23669
+# Current directory: /home/fabio/Desktop/linreg/linreg.runs/design_1_lmb_bram_0_synth_1
+# Command line: vivado -log design_1_lmb_bram_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_lmb_bram_0.tcl
+# Log file: /home/fabio/Desktop/linreg/linreg.runs/design_1_lmb_bram_0_synth_1/design_1_lmb_bram_0.vds
+# Journal file: /home/fabio/Desktop/linreg/linreg.runs/design_1_lmb_bram_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_lmb_bram_0.tcl -notrace

@@ -1,0 +1,394 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Tue Jul 10 00:11:34 2018
+| Host         : faviouz running 64-bit unknown
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_gradientdescent_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_gradientdescent_0_0 (user.org:user:gradientdescent:1.0) from (Rev. 18) to (Rev. 19)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Mon Jul  9 23:14:15 2018
+| Host         : faviouz running 64-bit unknown
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_gradientdescent_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_gradientdescent_0_0 (user.org:user:gradientdescent:1.0 (Rev. 18)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Mon Jul  9 23:12:29 2018
+| Host         : faviouz running 64-bit unknown
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_gradientdescent_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_gradientdescent_0_0 (user.org:user:gradientdescent:1.0 (Rev. 18)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Mon Jul  9 22:27:37 2018
+| Host         : faviouz running 64-bit unknown
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_gradientdescent_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_gradientdescent_0_0 (user.org:user:gradientdescent:1.0) from (Rev. 17) to (Rev. 18)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Mon Jul  9 22:26:43 2018
+| Host         : faviouz running 64-bit unknown
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_gradientdescent_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_gradientdescent_0_0 (user.org:user:gradientdescent:1.0) from (Rev. 16) to (Rev. 17)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Mon Jul  9 18:39:01 2018
+| Host         : faviouz running 64-bit unknown
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_gradientdescent_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_gradientdescent_0_0 (user.org:user:gradientdescent:1.0) from (Rev. 15) to (Rev. 16)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Mon Jul  9 17:45:04 2018
+| Host         : faviouz running 64-bit unknown
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_gradientdescent_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_gradientdescent_0_0 (user.org:user:gradientdescent:1.0) from (Rev. 14) to (Rev. 15)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Mon Jul  9 16:59:03 2018
+| Host         : faviouz running 64-bit unknown
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_gradientdescent_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_gradientdescent_0_0 (user.org:user:gradientdescent:1.0) from (Rev. 13) to (Rev. 14)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Mon Jul  9 16:16:45 2018
+| Host         : faviouz running 64-bit unknown
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_gradientdescent_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_gradientdescent_0_0 (user.org:user:gradientdescent:1.0) from (Rev. 12) to (Rev. 13)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Sun Jul  8 23:54:13 2018
+| Host         : faviouz running 64-bit unknown
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_gradientdescent_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_gradientdescent_0_0 (user.org:user:gradientdescent:1.0) from (Rev. 11) to (Rev. 12)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Sun Jul  8 23:16:39 2018
+| Host         : faviouz running 64-bit unknown
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_gradientdescent_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_gradientdescent_0_0 (user.org:user:gradientdescent:1.0) from (Rev. 10) to (Rev. 11)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Sun Jul  8 22:15:37 2018
+| Host         : faviouz running 64-bit unknown
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_gradientdescent_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_gradientdescent_0_0 (user.org:user:gradientdescent:1.0) from (Rev. 9) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Sun Jul  8 21:17:28 2018
+| Host         : faviouz running 64-bit unknown
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_gradientdescent_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_gradientdescent_0_0 (user.org:user:gradientdescent:1.0) from (Rev. 8) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Sun Jul  8 21:11:52 2018
+| Host         : faviouz running 64-bit unknown
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_gradientdescent_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_gradientdescent_0_0 (user.org:user:gradientdescent:1.0) from (Rev. 7) to (Rev. 8)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Sun Jul  8 21:11:12 2018
+| Host         : faviouz running 64-bit unknown
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_gradientdescent_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_gradientdescent_0_0 (user.org:user:gradientdescent:1.0) from (Rev. 6) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Sun Jul  8 20:54:28 2018
+| Host         : faviouz running 64-bit unknown
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_gradientdescent_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_gradientdescent_0_0 (user.org:user:gradientdescent:1.0) from (Rev. 5) to (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Sun Jul  8 20:49:41 2018
+| Host         : faviouz running 64-bit unknown
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_gradientdescent_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_gradientdescent_0_0 (user.org:user:gradientdescent:1.0) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Sun Jul  8 20:46:51 2018
+| Host         : faviouz running 64-bit unknown
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_gradientdescent_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_gradientdescent_0_0 (user.org:user:gradientdescent:1.0) from (Rev. 3) to (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
+| Date         : Sun Jul  8 19:31:30 2018
+| Host         : faviouz running 64-bit unknown
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_gradientdescent_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_gradientdescent_0_0 (user.org:user:gradientdescent:1.0) from (Rev. 2) to (Rev. 3)
+

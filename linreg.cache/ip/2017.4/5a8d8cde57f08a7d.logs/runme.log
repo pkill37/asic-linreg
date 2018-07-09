@@ -1,0 +1,1128 @@
+
+*** Running vivado
+    with args -log design_1_gradientdescent_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_gradientdescent_0_0.tcl
+
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source design_1_gradientdescent_0_0.tcl -notrace
+Command: synth_design -top design_1_gradientdescent_0_0 -part xc7a100tcsg324-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 15531 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1249.656 ; gain = 82.000 ; free physical = 736 ; free virtual = 7631
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_gradientdescent_0_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ip/design_1_gradientdescent_0_0/synth/design_1_gradientdescent_0_0.vhd:75]
+	Parameter C_S00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_START_COUNT bound to: 32 - type: integer 
+	Parameter m bound to: 10 - type: integer 
+	Parameter n bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'gradientdescent_v1_0' declared at '/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/hdl/gradientdescent_v1_0.vhd:6' bound to instance 'U0' of component 'gradientdescent_v1_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ip/design_1_gradientdescent_0_0/synth/design_1_gradientdescent_0_0.vhd:130]
+INFO: [Synth 8-638] synthesizing module 'gradientdescent_v1_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/hdl/gradientdescent_v1_0.vhd:39]
+	Parameter m bound to: 10 - type: integer 
+	Parameter n bound to: 2 - type: integer 
+	Parameter C_M00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_START_COUNT bound to: 32 - type: integer 
+	Parameter C_S00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'gradientdescent_v1_0_S00_AXIS' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/hdl/gradientdescent_v1_0_S00_AXIS.vhd:37]
+	Parameter m bound to: 10 - type: integer 
+	Parameter n bound to: 2 - type: integer 
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'MiniBatchGradientDescent' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/MiniBatchGradientDescent.vhd:19]
+	Parameter m bound to: 10 - type: integer 
+	Parameter n bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'matrix_multiply_by_vector' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/matrix_multiply_by_vector.vhd:18]
+	Parameter m bound to: 10 - type: integer 
+	Parameter n bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'matrix_multiply_by_vector' (1#1) [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/matrix_multiply_by_vector.vhd:18]
+INFO: [Synth 8-638] synthesizing module 'vector_subtract' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/vector_subtract.vhd:17]
+	Parameter m bound to: 10 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'vector_subtract' (2#1) [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/vector_subtract.vhd:17]
+INFO: [Synth 8-638] synthesizing module 'matrix_transpose' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/matrix_transpose.vhd:16]
+	Parameter m bound to: 10 - type: integer 
+	Parameter n bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'matrix_transpose' (3#1) [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/matrix_transpose.vhd:16]
+INFO: [Synth 8-638] synthesizing module 'matrix_multiply_by_vector__parameterized0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/matrix_multiply_by_vector.vhd:18]
+	Parameter m bound to: 2 - type: integer 
+	Parameter n bound to: 10 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'matrix_multiply_by_vector__parameterized0' (3#1) [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/matrix_multiply_by_vector.vhd:18]
+INFO: [Synth 8-638] synthesizing module 'vector_multiply_by_scalar' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/vector_multiply_by_scalar.vhd:17]
+	Parameter m bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'vector_multiply_by_scalar' (4#1) [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/vector_multiply_by_scalar.vhd:17]
+INFO: [Synth 8-638] synthesizing module 'vector_subtract__parameterized0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/vector_subtract.vhd:17]
+	Parameter m bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'vector_subtract__parameterized0' (4#1) [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/vector_subtract.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'MiniBatchGradientDescent' (5#1) [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/MiniBatchGradientDescent.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'gradientdescent_v1_0_S00_AXIS' (6#1) [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/hdl/gradientdescent_v1_0_S00_AXIS.vhd:37]
+INFO: [Synth 8-638] synthesizing module 'gradientdescent_v1_0_M00_AXIS' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/hdl/gradientdescent_v1_0_M00_AXIS.vhd:37]
+	Parameter n bound to: 2 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_START_COUNT bound to: 32 - type: integer 
+WARNING: [Synth 8-5863] Implementing Library version of Mod/Rem due to signed path. This typically leads to poor QOR. Check RTL to see if unsigned path for the operator is possible  [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/hdl/gradientdescent_v1_0_M00_AXIS.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'gradientdescent_v1_0_M00_AXIS' (7#1) [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/hdl/gradientdescent_v1_0_M00_AXIS.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'gradientdescent_v1_0' (8#1) [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/hdl/gradientdescent_v1_0.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'design_1_gradientdescent_0_0' (9#1) [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ip/design_1_gradientdescent_0_0/synth/design_1_gradientdescent_0_0.vhd:75]
+WARNING: [Synth 8-3331] design gradientdescent_v1_0_M00_AXIS has unconnected port M_AXIS_ARESETN
+WARNING: [Synth 8-3331] design gradientdescent_v1_0_S00_AXIS has unconnected port S_AXIS_TSTRB[3]
+WARNING: [Synth 8-3331] design gradientdescent_v1_0_S00_AXIS has unconnected port S_AXIS_TSTRB[2]
+WARNING: [Synth 8-3331] design gradientdescent_v1_0_S00_AXIS has unconnected port S_AXIS_TSTRB[1]
+WARNING: [Synth 8-3331] design gradientdescent_v1_0_S00_AXIS has unconnected port S_AXIS_TSTRB[0]
+WARNING: [Synth 8-3331] design gradientdescent_v1_0_S00_AXIS has unconnected port S_AXIS_TLAST
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1296.188 ; gain = 128.531 ; free physical = 739 ; free virtual = 7633
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1296.188 ; gain = 128.531 ; free physical = 743 ; free virtual = 7637
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1635.023 ; gain = 2.000 ; free physical = 450 ; free virtual = 7358
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 1635.023 ; gain = 467.367 ; free physical = 549 ; free virtual = 7447
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 1635.023 ; gain = 467.367 ; free physical = 549 ; free virtual = 7447
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 1635.023 ; gain = 467.367 ; free physical = 551 ; free virtual = 7449
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/src/Types.vhd:14]
+INFO: [Synth 8-4471] merging register 's_X_reg[9,0][31:0]' into 's_X_reg[9,1][31:0]' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/hdl/gradientdescent_v1_0_S00_AXIS.vhd:49]
+INFO: [Synth 8-4471] merging register 's_X_reg[8,1][31:0]' into 's_X_reg[9,1][31:0]' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/hdl/gradientdescent_v1_0_S00_AXIS.vhd:49]
+INFO: [Synth 8-4471] merging register 's_X_reg[8,0][31:0]' into 's_X_reg[9,1][31:0]' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/hdl/gradientdescent_v1_0_S00_AXIS.vhd:49]
+INFO: [Synth 8-4471] merging register 's_Y_reg[9][31:0]' into 's_X_reg[9,1][31:0]' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/hdl/gradientdescent_v1_0_S00_AXIS.vhd:50]
+INFO: [Synth 8-4471] merging register 's_Y_reg[8][31:0]' into 's_X_reg[9,1][31:0]' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/hdl/gradientdescent_v1_0_S00_AXIS.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element s_X_reg[9,0] was removed.  [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/hdl/gradientdescent_v1_0_S00_AXIS.vhd:49]
+WARNING: [Synth 8-6014] Unused sequential element s_X_reg[8,1] was removed.  [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/hdl/gradientdescent_v1_0_S00_AXIS.vhd:49]
+WARNING: [Synth 8-6014] Unused sequential element s_X_reg[8,0] was removed.  [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/hdl/gradientdescent_v1_0_S00_AXIS.vhd:49]
+WARNING: [Synth 8-6014] Unused sequential element s_Y_reg[9] was removed.  [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/hdl/gradientdescent_v1_0_S00_AXIS.vhd:50]
+WARNING: [Synth 8-6014] Unused sequential element s_Y_reg[8] was removed.  [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ipshared/4384/hdl/gradientdescent_v1_0_S00_AXIS.vhd:50]
+INFO: [Synth 8-5544] ROM "s_X[9,1]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_X_reg[7,1]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_X_reg[7,0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_Y_reg[7]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_Y_reg[6]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_Y_reg[5]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_Y_reg[4]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_Y_reg[3]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_Y_reg[2]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_Y_reg[1]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_Y_reg[0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_valid" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "p_0_in" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:37 ; elapsed = 00:00:48 . Memory (MB): peak = 1635.023 ; gain = 467.367 ; free physical = 494 ; free virtual = 7401
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------------------------------+------------+----------+
+|      |RTL Partition                                  |Replication |Instances |
++------+-----------------------------------------------+------------+----------+
+|1     |matrix_multiply_by_vector__GB0                 |           1|     17806|
+|2     |matrix_multiply_by_vector__GB1                 |           1|      2331|
+|3     |matrix_multiply_by_vector__GB2                 |           1|      2805|
+|4     |matrix_multiply_by_vector__GB3                 |           1|      3781|
+|5     |matrix_multiply_by_vector__GB4                 |           1|      3307|
+|6     |matrix_multiply_by_vector__parameterized0__GB0 |           1|     16577|
+|7     |matrix_multiply_by_vector__parameterized0__GB1 |           1|      3894|
+|8     |matrix_multiply_by_vector__parameterized0__GB2 |           1|      5830|
+|9     |matrix_multiply_by_vector__parameterized0__GB3 |           1|      5093|
+|10    |MiniBatchGradientDescent__GC0                  |           1|      5827|
+|11    |gradientdescent_v1_0_S00_AXIS__GC0             |           1|      1433|
+|12    |gradientdescent_v1_0_M00_AXIS                  |           1|       480|
++------+-----------------------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 96    
+	  10 Input     32 Bit       Adders := 2     
+	   3 Input     32 Bit       Adders := 12    
+	   2 Input     31 Bit       Adders := 43    
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 29    
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 46    
+	   2 Input     31 Bit        Muxes := 43    
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 46    
+	   6 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 8     
+	   3 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module matrix_multiply_by_vector 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 50    
+	   2 Input     31 Bit       Adders := 20    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 20    
+	   2 Input     31 Bit        Muxes := 20    
+Module matrix_multiply_by_vector__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 40    
+	  10 Input     32 Bit       Adders := 2     
+	   2 Input     31 Bit       Adders := 20    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 20    
+	   2 Input     31 Bit        Muxes := 20    
+Module vector_subtract 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 10    
+Module vector_multiply_by_scalar 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   2 Input     31 Bit       Adders := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     31 Bit        Muxes := 2     
+Module vector_subtract__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 2     
+Module MiniBatchGradientDescent 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     31 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     31 Bit        Muxes := 1     
+Module gradientdescent_v1_0_S00_AXIS 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 28    
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 46    
+	   6 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 8     
+	   3 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+Module gradientdescent_v1_0_M00_AXIS 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: Generating DSP element_multiply2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+DSP Report: operator element_multiply2 is absorbed into DSP element_multiply2.
+INFO: [Synth 8-3917] design design_1_gradientdescent_0_0 has port s00_axis_tready driven by constant 1
+WARNING: [Synth 8-3331] design design_1_gradientdescent_0_0 has unconnected port s00_axis_tstrb[3]
+WARNING: [Synth 8-3331] design design_1_gradientdescent_0_0 has unconnected port s00_axis_tstrb[2]
+WARNING: [Synth 8-3331] design design_1_gradientdescent_0_0 has unconnected port s00_axis_tstrb[1]
+WARNING: [Synth 8-3331] design design_1_gradientdescent_0_0 has unconnected port s00_axis_tstrb[0]
+WARNING: [Synth 8-3331] design design_1_gradientdescent_0_0 has unconnected port s00_axis_tlast
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_alpha_reg[28]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_alpha_reg[29]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_alpha_reg[29]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_alpha_reg[30]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_alpha_reg[30]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_alpha_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[0][25]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[0][26]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[0][26]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[0][27]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[0][27]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[0][28]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[0][29]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[0][29]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[0][30]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[0][30]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[0][31]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[1][25]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[1][26]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[1][26]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[1][27]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[1][27]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[1][28]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[1][28]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[1][29]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[1][29]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[1][30]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[1][30]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[2][25]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[2][26]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[2][26]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[2][27]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[2][27]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[2][28]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[2][28]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[2][29]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[2][29]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[2][30]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[2][30]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[2][31]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[3][25]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[3][26]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[3][26]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[3][27]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[3][27]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[3][28]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[3][28]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[3][29]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[3][29]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[3][30]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[3][30]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[3][31]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[4][25]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[4][26]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[4][26]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[4][27]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[4][27]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[4][28]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[4][28]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[4][29]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[4][29]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[4][30]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[4][30]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[4][31]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[5][25]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[5][26]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[5][26]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[5][27]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[5][27]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[5][28]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[5][28]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[5][29]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[5][29]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[5][30]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[5][30]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[5][31]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[6][25]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[6][26]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[6][26]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[6][27]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[6][27]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[6][28]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[6][28]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[6][29]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[6][29]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[6][30]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[6][30]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[6][31]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[7][25]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[7][26]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[7][26]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[7][27]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[7][27]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[7][28]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[7][28]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[7][29]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[7][29]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[7][30]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[7][30]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_Y_reg[7][31]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,0][22]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,0][23]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,0][23]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,0][24]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,0][24]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,0][25]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,0][25]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,0][26]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,0][26]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,0][27]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,0][27]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,0][28]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,0][28]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,0][29]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,0][29]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,0][30]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,0][30]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,0][31]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,1][22]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,1][23]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,1][23]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,1][24]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,1][24]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,1][25]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,1][25]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,1][26]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,1][26]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,1][27]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,1][27]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,1][28]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,1][28]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,1][29]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,1][29]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,1][30]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,1][30]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[0,1][31]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,0][22]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,0][23]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,0][23]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,0][24]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,0][24]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,0][25]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,0][25]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,0][26]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,0][26]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,0][27]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,0][27]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,0][28]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,0][28]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,0][29]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,0][29]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,0][30]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,0][30]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,0][31]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,1][22]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,1][23]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,1][23]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,1][24]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,1][24]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,1][25]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,1][25]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,1][26]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,1][26]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,1][27]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,1][27]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,1][28]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,1][28]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,1][29]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,1][29]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,1][30]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,1][30]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[1,1][31]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[2,0][22]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[2,0][23]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[2,0][23]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[2,0][24]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[2,0][24]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[2,0][25]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[2,0][25]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[2,0][26]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[2,0][26]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[2,0][27]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[2,0][27]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[2,0][28]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[2,0][28]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[2,0][29]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[2,0][29]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[2,0][30]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[2,0][30]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[2,0][31]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[2,1][22]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[2,1][23]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[2,1][23]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[2,1][24]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[2,1][24]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[2,1][25]'
+INFO: [Synth 8-3886] merging instance 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[2,1][25]' (FDRE) to 'gradientdescent_v1_0_S00_AXIS_insti_10/s_X_reg[2,1][26]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (gradientdescent_v1_0_S00_AXIS_insti_10/\s_X_reg[9,1][31] )
+WARNING: [Synth 8-3332] Sequential element (it_reg[3]) is unused and will be removed from module gradientdescent_v1_0_M00_AXIS.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:19 . Memory (MB): peak = 1635.023 ; gain = 467.367 ; free physical = 389 ; free virtual = 7316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++--------------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name               | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_multiply_by_vector | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vector_multiply_by_scalar | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vector_multiply_by_scalar | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vector_multiply_by_scalar | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vector_multiply_by_scalar | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vector_multiply_by_scalar | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vector_multiply_by_scalar | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++--------------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------------------------------+------------+----------+
+|      |RTL Partition                                  |Replication |Instances |
++------+-----------------------------------------------+------------+----------+
+|1     |matrix_multiply_by_vector__GB0                 |           1|     22131|
+|2     |matrix_multiply_by_vector__GB1                 |           1|      4009|
+|3     |matrix_multiply_by_vector__GB2                 |           1|      4194|
+|4     |matrix_multiply_by_vector__GB3                 |           1|      6123|
+|5     |matrix_multiply_by_vector__GB4                 |           1|      5923|
+|6     |matrix_multiply_by_vector__parameterized0__GB0 |           1|     21142|
+|7     |matrix_multiply_by_vector__parameterized0__GB1 |           1|      5973|
+|8     |matrix_multiply_by_vector__parameterized0__GB2 |           1|      7220|
+|9     |matrix_multiply_by_vector__parameterized0__GB3 |           1|      8211|
+|10    |MiniBatchGradientDescent__GC0                  |           1|      6672|
+|11    |gradientdescent_v1_0_S00_AXIS__GC0             |           1|       844|
+|12    |gradientdescent_v1_0_M00_AXIS                  |           1|       133|
++------+-----------------------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:17 ; elapsed = 00:01:35 . Memory (MB): peak = 1765.312 ; gain = 597.656 ; free physical = 125 ; free virtual = 6970
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:17 ; elapsed = 00:01:35 . Memory (MB): peak = 1765.312 ; gain = 597.656 ; free physical = 125 ; free virtual = 6970
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------------------------------------+------------+----------+
+|      |RTL Partition                                  |Replication |Instances |
++------+-----------------------------------------------+------------+----------+
+|1     |matrix_multiply_by_vector__GB0                 |           1|     22131|
+|2     |matrix_multiply_by_vector__GB1                 |           1|      4009|
+|3     |matrix_multiply_by_vector__GB2                 |           1|      4194|
+|4     |matrix_multiply_by_vector__GB3                 |           1|      6123|
+|5     |matrix_multiply_by_vector__GB4                 |           1|      5923|
+|6     |matrix_multiply_by_vector__parameterized0__GB0 |           1|     21142|
+|7     |matrix_multiply_by_vector__parameterized0__GB1 |           1|      5973|
+|8     |matrix_multiply_by_vector__parameterized0__GB2 |           1|      7220|
+|9     |matrix_multiply_by_vector__parameterized0__GB3 |           1|      8211|
+|10    |MiniBatchGradientDescent__GC0                  |           1|      6672|
+|11    |gradientdescent_v1_0_S00_AXIS__GC0             |           1|       844|
+|12    |gradientdescent_v1_0_M00_AXIS                  |           1|       133|
++------+-----------------------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:28 ; elapsed = 00:01:47 . Memory (MB): peak = 1939.586 ; gain = 771.930 ; free physical = 321 ; free virtual = 7013
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:31 ; elapsed = 00:01:50 . Memory (MB): peak = 1939.586 ; gain = 771.930 ; free physical = 266 ; free virtual = 6995
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:31 ; elapsed = 00:01:50 . Memory (MB): peak = 1939.586 ; gain = 771.930 ; free physical = 265 ; free virtual = 6993
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:34 ; elapsed = 00:01:53 . Memory (MB): peak = 1939.586 ; gain = 771.930 ; free physical = 257 ; free virtual = 6985
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:38 ; elapsed = 00:01:57 . Memory (MB): peak = 1939.586 ; gain = 771.930 ; free physical = 235 ; free virtual = 6976
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:38 ; elapsed = 00:01:58 . Memory (MB): peak = 1939.586 ; gain = 771.930 ; free physical = 233 ; free virtual = 6974
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:39 ; elapsed = 00:01:58 . Memory (MB): peak = 1939.586 ; gain = 771.930 ; free physical = 234 ; free virtual = 6975
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |  4290|
+|2     |DSP48E1   |    18|
+|3     |DSP48E1_1 |    48|
+|4     |DSP48E1_2 |    48|
+|5     |DSP48E1_3 |     4|
+|6     |DSP48E1_4 |     8|
+|7     |LUT1      |  1671|
+|8     |LUT2      |  2988|
+|9     |LUT3      |  6999|
+|10    |LUT4      |  2323|
+|11    |LUT5      |  4756|
+|12    |LUT6      | 10217|
+|13    |FDRE      |   334|
+|14    |FDSE      |     2|
++------+----------+------+
+
+Report Instance Areas: 
++------+---------------------------------------+------------------------------------------+------+
+|      |Instance                               |Module                                    |Cells |
++------+---------------------------------------+------------------------------------------+------+
+|1     |top                                    |                                          | 33706|
+|2     |  U0                                   |gradientdescent_v1_0                      | 27121|
+|3     |    gradientdescent_v1_0_M00_AXIS_inst |gradientdescent_v1_0_M00_AXIS             |    68|
+|4     |    gradientdescent_v1_0_S00_AXIS_inst |gradientdescent_v1_0_S00_AXIS             | 27053|
+|5     |      mini_batch_gradient_descent      |MiniBatchGradientDescent                  | 26268|
+|6     |        h                              |matrix_multiply_by_vector                 | 11897|
+|7     |        t1                             |matrix_multiply_by_vector__parameterized0 | 12722|
+|8     |        t2                             |vector_multiply_by_scalar                 |  1649|
++------+---------------------------------------+------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:39 ; elapsed = 00:01:58 . Memory (MB): peak = 1939.586 ; gain = 771.930 ; free physical = 234 ; free virtual = 6975
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:29 ; elapsed = 00:01:38 . Memory (MB): peak = 1939.586 ; gain = 433.094 ; free physical = 312 ; free virtual = 7053
+Synthesis Optimization Complete : Time (s): cpu = 00:01:39 ; elapsed = 00:01:58 . Memory (MB): peak = 1939.594 ; gain = 771.930 ; free physical = 320 ; free virtual = 7061
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 4416 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+197 Infos, 18 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:50 ; elapsed = 00:02:09 . Memory (MB): peak = 1939.594 ; gain = 785.309 ; free physical = 272 ; free virtual = 7047
+INFO: [Common 17-1381] The checkpoint '/home/fabio/Desktop/linreg/linreg.runs/design_1_gradientdescent_0_0_synth_1/design_1_gradientdescent_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1963.598 ; gain = 24.004 ; free physical = 260 ; free virtual = 7037
+write_vhdl: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1963.598 ; gain = 0.000 ; free physical = 474 ; free virtual = 7222
