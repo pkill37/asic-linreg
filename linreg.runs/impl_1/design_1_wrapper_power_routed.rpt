@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
-| Date             : Mon Jul  9 22:53:19 2018
+| Date             : Tue Jul 10 18:18:50 2018
 | Host             : faviouz running 64-bit unknown
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.257        |
+| Total On-Chip Power (W)  | 0.253        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.158        |
+| Dynamic (W)              | 0.155        |
 | Device Static (W)        | 0.098        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 83.8         |
@@ -53,21 +53,21 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.004 |        7 |       --- |             --- |
-| Slice Logic              |     0.006 |     8212 |       --- |             --- |
-|   LUT as Logic           |     0.005 |     4426 |     63400 |            6.98 |
-|   CARRY4                 |    <0.001 |      674 |     15850 |            4.25 |
+| Slice Logic              |     0.006 |     9272 |       --- |             --- |
+|   LUT as Logic           |     0.005 |     5193 |     63400 |            8.19 |
+|   CARRY4                 |    <0.001 |      892 |     15850 |            5.63 |
 |   LUT as Distributed RAM |    <0.001 |       64 |     19000 |            0.34 |
 |   Register               |    <0.001 |     1762 |    126800 |            1.39 |
 |   F7/F8 Muxes            |    <0.001 |      108 |     63400 |            0.17 |
 |   LUT as Shift Register  |    <0.001 |       75 |     19000 |            0.39 |
 |   Others                 |    <0.001 |      503 |       --- |             --- |
-| Signals                  |     0.014 |    13593 |       --- |             --- |
+| Signals                  |     0.015 |    15506 |       --- |             --- |
 | Block RAM                |     0.001 |       16 |       135 |           11.85 |
 | MMCM                     |     0.112 |        1 |         6 |           16.67 |
-| DSPs                     |     0.022 |      168 |       240 |           70.00 |
+| DSPs                     |     0.017 |      168 |       240 |           70.00 |
 | I/O                      |    <0.001 |        4 |       210 |            1.90 |
 | Static Power             |     0.098 |          |           |                 |
-| Total                    |     0.257 |          |           |                 |
+| Total                    |     0.253 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.063 |       0.047 |      0.016 |
+| Vccint    |       1.000 |     0.059 |       0.043 |      0.016 |
 | Vccaux    |       1.800 |     0.080 |       0.062 |      0.018 |
 | Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -150,8 +150,8 @@ Table of Contents
 +------------------------------------------------------------------------------------+-----------+
 | Name                                                                               | Power (W) |
 +------------------------------------------------------------------------------------+-----------+
-| design_1_wrapper                                                                   |     0.158 |
-|   design_1_i                                                                       |     0.158 |
+| design_1_wrapper                                                                   |     0.155 |
+|   design_1_i                                                                       |     0.155 |
 |     axi_intc_0                                                                     |    <0.001 |
 |       U0                                                                           |    <0.001 |
 |         AXI_LITE_IPIF_I                                                            |    <0.001 |
@@ -191,15 +191,15 @@ Table of Contents
 |                 DYNSHREG_F_I                                                       |    <0.001 |
 |     clk_wiz_1                                                                      |     0.112 |
 |       inst                                                                         |     0.112 |
-|     gradientdescent_0                                                              |     0.040 |
-|       U0                                                                           |     0.040 |
+|     gradientdescent_0                                                              |     0.037 |
+|       U0                                                                           |     0.036 |
 |         gradientdescent_v1_0_M00_AXIS_inst                                         |    <0.001 |
-|         gradientdescent_v1_0_S00_AXIS_inst                                         |     0.039 |
-|           mini_batch_gradient_descent                                              |     0.039 |
+|         gradientdescent_v1_0_S00_AXIS_inst                                         |     0.036 |
+|           mini_batch_gradient_descent                                              |     0.036 |
 |             e                                                                      |    <0.001 |
-|             h                                                                      |     0.014 |
+|             h                                                                      |     0.011 |
 |             t1                                                                     |     0.020 |
-|             t2                                                                     |     0.003 |
+|             t2                                                                     |     0.004 |
 |     mdm_1                                                                          |    <0.001 |
 |       U0                                                                           |    <0.001 |
 |         MDM_Core_I1                                                                |    <0.001 |
@@ -212,9 +212,9 @@ Table of Contents
 |             Use_ID_SRL16E.SRL16E_ID_2                                              |    <0.001 |
 |         No_Dbg_Reg_Access.BUFG_DRCK                                                |    <0.001 |
 |         Use_E2.BSCAN_I                                                             |    <0.001 |
-|     microblaze_0                                                                   |     0.004 |
-|       U0                                                                           |     0.004 |
-|         MicroBlaze_Core_I                                                          |     0.004 |
+|     microblaze_0                                                                   |     0.003 |
+|       U0                                                                           |     0.003 |
+|         MicroBlaze_Core_I                                                          |     0.003 |
 |           Performance.Core                                                         |     0.003 |
 |             Data_Flow_I                                                            |     0.001 |
 |               ALU_I                                                                |    <0.001 |

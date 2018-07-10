@@ -1,1 +1,0 @@
--wto "ec8588b8ea9a49ada81aa04e4b16a32c" --incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "MiniBatchGradientDescentTest_behav" "xil_defaultlib.MiniBatchGradientDescentTest" -log "elaborate.log" 

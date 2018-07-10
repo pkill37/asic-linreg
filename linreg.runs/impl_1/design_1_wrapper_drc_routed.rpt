@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
-| Date         : Mon Jul  9 22:53:06 2018
+| Date         : Tue Jul 10 18:18:35 2018
 | Host         : faviouz running 64-bit unknown
 | Command      : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 | Design       : design_1_wrapper
@@ -24,12 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 431
+             Violations found: 471
 +----------+----------+-----------------------------------------------------+------------+
 | Rule     | Severity | Description                                         | Violations |
 +----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| DPIP-1   | Warning  | Input pipelining                                    | 94         |
+| DPIP-1   | Warning  | Input pipelining                                    | 134        |
 | DPOP-1   | Warning  | PREG Output pipelining                              | 168        |
 | DPOP-2   | Warning  | MREG Output pipelining                              | 168        |
 +----------+----------+-----------------------------------------------------+------------+
@@ -51,470 +51,670 @@ Related violations: <none>
 
 DPIP-1#1 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__0 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#2 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__0 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__10 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__10/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#3 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__1 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__12 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__12/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#4 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__10 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__10/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__14 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__14/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#5 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__11 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__11/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__16 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__16/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#6 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__12 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__12/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__18 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__18/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#7 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__13 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__13/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__2 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#8 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__14 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__14/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__20 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__20/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#9 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__15 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__15/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__22 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__22/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#10 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__16 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__16/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__24 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__24/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#11 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__17 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__17/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__26 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__26/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#12 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__18 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__18/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__28 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__28/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#13 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__19 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__19/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__30 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__30/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#14 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__2 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__32 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__32/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#15 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__20 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__20/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__34 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__34/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#16 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__21 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__21/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__36 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__36/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#17 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__22 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__22/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__38 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__38/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#18 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__23 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__23/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__4 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#19 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__24 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__24/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__40 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__40/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#20 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__25 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__25/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__42 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__42/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#21 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__26 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__26/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__44 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__44/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#22 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__27 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__27/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__46 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__46/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#23 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__28 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__28/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__48 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__48/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#24 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__29 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__29/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__50 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__50/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#25 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__3 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__52 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__52/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#26 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__30 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__30/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__54 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__54/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#27 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__31 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__31/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__56 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__56/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#28 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__32 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__32/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__58 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__58/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#29 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__33 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__33/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__6 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#30 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__34 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__34/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__60 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__60/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#31 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__35 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__35/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__62 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__62/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#32 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__36 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__36/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__64 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__64/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#33 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__37 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__37/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__66 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__66/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#34 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__38 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__38/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__68 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__68/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#35 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__39 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__39/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__70 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__70/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#36 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__4 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__72 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__72/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#37 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__40 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__40/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__74 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__74/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#38 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__41 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__41/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__76 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__76/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#39 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__42 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__42/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__78 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__78/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#40 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__43 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__43/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__8 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/h/ARG__8/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#41 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__44 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__44/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#42 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__45 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__45/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__0 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#43 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__46 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__46/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__1 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#44 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__47 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__47/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__10 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__10/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#45 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__48 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__48/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__11 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__11/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#46 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__49 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__49/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__12 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__12/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#47 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__5 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__5/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__13 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__13/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#48 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__50 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__50/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__14 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__14/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#49 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__51 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__51/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__15 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__15/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#50 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__52 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__52/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__16 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__16/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#51 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__53 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__53/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__17 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__17/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#52 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__54 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__54/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__18 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__18/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#53 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__55 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__55/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__19 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__19/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#54 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__56 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__56/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__2 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#55 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__57 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__57/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__20 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__20/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#56 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__58 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__58/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__21 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__21/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#57 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__59 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__59/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__22 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__22/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#58 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__6 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__23 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__23/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#59 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__60 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__60/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__24 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__24/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#60 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__61 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__61/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__25 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__25/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#61 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__62 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__62/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__26 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__26/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#62 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__63 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__63/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__27 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__27/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#63 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__64 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__64/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__28 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__28/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#64 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__65 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__65/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__29 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__29/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#65 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__66 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__66/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__3 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#66 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__67 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__67/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__30 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__30/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#67 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__68 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__68/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__31 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__31/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#68 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__69 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__69/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__32 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__32/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#69 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__7 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__7/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__33 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__33/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#70 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__70 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__70/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__34 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__34/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#71 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__71 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__71/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__35 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__35/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#72 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__72 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__72/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__36 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__36/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#73 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__73 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__73/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__37 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__37/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#74 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__74 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__74/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__38 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__38/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#75 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__75 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__75/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__39 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__39/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#76 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__76 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__76/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__4 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#77 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__77 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__77/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__40 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__40/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#78 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__78 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__78/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__41 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__41/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#79 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__8 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__8/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__42 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__42/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#80 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__9 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__9/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__43 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__43/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#81 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__44 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__44/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#82 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__45 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__45/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#83 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__0 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__46 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__46/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#84 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__0 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__47 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__47/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#85 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__1 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__48 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__48/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#86 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__1 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__49 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__49/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#87 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__2 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__5 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__5/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#88 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__3 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__50 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__50/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#89 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__3 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__51 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__51/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#90 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__4 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__52 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__52/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#91 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__4 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__53 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__53/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#92 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__5 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__5/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__54 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__54/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#93 Warning
 Input pipelining  
-DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__5 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__5/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__55 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__55/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#94 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__56 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__56/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#95 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__57 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__57/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#96 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__58 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__58/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#97 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__59 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__59/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#98 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__6 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#99 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__60 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__60/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#100 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__61 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__61/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#101 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__62 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__62/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#102 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__63 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__63/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#103 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__64 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__64/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#104 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__65 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__65/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#105 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__66 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__66/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#106 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__67 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__67/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#107 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__68 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__68/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#108 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__69 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__69/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#109 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__7 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__7/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#110 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__70 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__70/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#111 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__71 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__71/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#112 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__72 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__72/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#113 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__73 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__73/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#114 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__74 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__74/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#115 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__75 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__75/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#116 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__76 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__76/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#117 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__77 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__77/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#118 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__78 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__78/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#119 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__8 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__8/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#120 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__9 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t1/ARG__9/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#121 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#122 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#123 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__0 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#124 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__0 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#125 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__1 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#126 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__1 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#127 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__2 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#128 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__3 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#129 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__3 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#130 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__4 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#131 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__4 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#132 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__5 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__5/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#133 Warning
+Input pipelining  
+DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__5 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__5/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#134 Warning
 Input pipelining  
 DSP design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__6 input design_1_i/gradientdescent_0/U0/gradientdescent_v1_0_S00_AXIS_inst/mini_batch_gradient_descent/t2/ARG__6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>

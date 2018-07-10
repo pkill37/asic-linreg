@@ -40,6 +40,11 @@ Y = fix(Y*s);
 theta = fix(theta*s);
 alpha = fix(alpha*s);
 
+%dec2hex(X)
+%dec2hex(Y)
+%dec2hex(theta)
+%dec2hex(alpha)
+
 for i = 1:5
     hypothesis = bitshift(X*theta, -11);
     err = fix(hypothesis - Y);
@@ -57,14 +62,3 @@ end
 %    tmp2 = (tmp1 * scalar);
 %    theta = theta - tmp2
 %end
-
-%theta=theta/s
-
-%scatter(X(:,2), Y);
-%xlabel('X');
-%ylabel('Y');
-%hold on
-
-%x = X(:,2);
-%y = (theta(1) + theta(2)*x);
-%plot(x,y);

@@ -56,7 +56,7 @@ unsigned int store_a(int a)
 unsigned int compute(unsigned int iter)
 {
 	unsigned int inst = iter;
-	inst = ((OPCODE_COMPUTE << 29) | inst);
+	inst = (OPCODE_COMPUTE << 29) | inst;
 	return inst;
 }
 
@@ -77,7 +77,7 @@ int main()
     		{1*SCALING_FACTOR, 2.20*SCALING_FACTOR}
     };
 
-    int Y[] = {
+    int Y[CONSTANT_M] = {
     		4.12*SCALING_FACTOR,
 			3.04*SCALING_FACTOR,
 			3.19*SCALING_FACTOR,
@@ -90,18 +90,17 @@ int main()
 			2.82*SCALING_FACTOR
     };
 
-    int T[] = {
+    int T[CONSTANT_N] = {
     		1.01*SCALING_FACTOR,
 			2.02*SCALING_FACTOR
     };
 
     int alpha = 0.11*SCALING_FACTOR;
 
-
-//    int X[3][3] = {{1*SCALING_FACTOR,2*SCALING_FACTOR,5*SCALING_FACTOR}, {1*SCALING_FACTOR,3*SCALING_FACTOR,6*SCALING_FACTOR}, {1*SCALING_FACTOR,4*SCALING_FACTOR,7*SCALING_FACTOR}};
-//    int Y[3] = {0*SCALING_FACTOR,1*SCALING_FACTOR,2*SCALING_FACTOR};
-//    int T[3] = {1*SCALING_FACTOR,2*SCALING_FACTOR,2*SCALING_FACTOR};
-//    int alpha = CONSTANT_M*SCALING_FACTOR;
+//    int X[CONSTANT_M][CONSTANT_N] = {{1,1},{1,2},{1,3}};
+//    int Y[CONSTANT_M] = {1,2,3};
+//    int T[CONSTANT_N] = {1,2};
+//    int alpha = CONSTANT_M;
 
     // Reset coprocessor
     putfsl(reset(), 0);
@@ -111,7 +110,7 @@ int main()
         for (unsigned int j = 0; j < CONSTANT_N; j++) {
         	unsigned int inst = store_x(X[i][j], i, j);
             putfsl(inst, 0);
-    		xil_printf("\nStored X[%d][%d] = %d with instruction 0x%08x", i, j, X[i][j], inst);
+    		xil_printf("\nStored X[%d][%d] = 0x%08x = %d with instruction 0x%08x", i, j, X[i][j], X[i][j], inst);
         }
     }
 
@@ -119,19 +118,19 @@ int main()
 	for (unsigned int i = 0; i < CONSTANT_M; i++) {
 		unsigned int inst = store_y(Y[i], i);
 		putfsl(inst, 0);
-		xil_printf("\nStored Y[%d] = %d with instruction 0x%08x", i, Y[i], inst);
+		xil_printf("\nStored Y[%d] = 0x%08x = %d with instruction 0x%08x", i, Y[i], Y[i], inst);
 	}
 
 	// Store theta vector
 	for (unsigned int i = 0; i < CONSTANT_N; i++) {
 		unsigned int inst = store_t(T[i], i);
 		putfsl(inst, 0);
-		xil_printf("\nStored T[%d] = %d with instruction 0x%08x", i, T[i], inst);
+		xil_printf("\nStored T[%d] = 0x%08x = %d with instruction 0x%08x", i, T[i], T[i], inst);
 	}
 
 	// Store learning rate value
 	unsigned int inst = store_a(alpha);
-	xil_printf("\nStored alpha = %d with instruction 0x%08x", alpha, inst);
+	xil_printf("\nStored alpha = 0x%08x = %d with instruction 0x%08x", alpha, alpha, inst);
 	putfsl(inst, 0);
 
     // Run gradient descent for linear regression until the algorithm converges
@@ -147,7 +146,7 @@ int main()
     		unsigned int v;
     		getfsl(v, 0);
     		T[l] = (int) v;
-    		xil_printf("\nRetrieved new T[%d] = %d", l, T[l]);
+    		xil_printf("\nRetrieved 0x%08x = %d and saved current T[%d] = %d", v, v, l, T[l]);
     	}
     }
 
@@ -155,6 +154,9 @@ int main()
     xil_printf("\nLinear regression model is y = ");
     for (unsigned int i = 0; i < CONSTANT_N-1; i++) xil_printf("%d*x^%d + ", T[i], i);
     xil_printf("%d*x^%d", T[CONSTANT_N-1], CONSTANT_N-1);
+
+    // Reset coprocessor
+	putfsl(reset(), 0);
 
     cleanup_platform();
     return 0;

@@ -1,7 +1,0 @@
-Running: xsim.dir/MiniBatchGradientDescentTest_behav/xsimk -simmode gui -wdb MiniBatchGradientDescentTest_behav.wdb -simrunnum 0 -socket 53485
-Design successfully loaded
-Design Loading Memory Usage: 47532 KB (Peak: 47584 KB)
-Design Loading CPU Usage: 30 ms
-Simulation completed
-Simulation Memory Usage: 137468 KB (Peak: 194804 KB)
-Simulation CPU Usage: 30 ms
