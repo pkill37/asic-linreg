@@ -24,7 +24,6 @@ package body Types is
     function element_multiply(a: std_logic_vector; b: std_logic_vector) return std_logic_vector is variable c : std_logic_vector(WORD_SIZE-1 downto 0);
         variable tmp1 : std_logic_vector(63 downto 0);
     begin
-        --c := std_logic_vector(resize(signed(a)*signed(b), WORD_SIZE));
         tmp1 := std_logic_vector(signed(a)*signed(b));
         tmp1 := std_logic_vector(shift_right(signed(tmp1), 11)); -- division by the scaling factor 
         c := std_logic_vector(resize(signed(tmp1), WORD_SIZE));
