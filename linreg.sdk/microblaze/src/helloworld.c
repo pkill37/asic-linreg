@@ -2,121 +2,126 @@
 #include "platform.h"
 #include "xil_printf.h"
 #include "mb_interface.h"
+#include "xparameters.h"
+#include "xintc_l.h"
+#include "xil_exception.h"
+#include "xstatus.h"
+#include <stdint.h>
 
-#define OPCODE_RESET   4
-#define OPCODE_STORE_X 0
-#define OPCODE_STORE_Y 1
-#define OPCODE_STORE_T 2
-#define OPCODE_STORE_A 5
-#define OPCODE_COMPUTE 3
+#include "instructions.h"
+#include "linreg.h"
+
+#define INTC_BASEADDR			XPAR_INTC_0_BASEADDR
+#define INTC_DEVICE_ID			XPAR_INTC_0_DEVICE_ID
+#define FIT_TIMER_0_INT_ID		XPAR_AXI_INTC_0_FIT_TIMER_0_INTERRUPT_INTR
+#define FIT_TIMER_0_INT_MASK	XPAR_FIT_TIMER_0_INTERRUPT_MASK
 
 #define CONSTANT_M 6
 #define CONSTANT_N 2
 #define SCALING_FACTOR 2048
 #define CONSTANT_THRESHOLD 1
 
-unsigned int reset()
+static int irqCount = 0;
+
+void tic()
 {
-	unsigned int inst = 0; // don't care
-	inst = ((OPCODE_RESET << 29) | inst);
-
-	xil_printf("\nInstruction 0x%08x: reset coprocessor registers and state", inst);
-	putfsl(inst, 0);
-
-	return inst;
+	irqCount = 0;
 }
 
-unsigned int store_x(int x, unsigned int i, unsigned int j)
+void print_float(float Input)
 {
-	unsigned int inst = (x & 0x007fffff);
-	inst = ((j << 23) & 0x03800000) | inst;
-	inst = ((i << 26) & 0x1C000000) | inst;
-	inst = (OPCODE_STORE_X << 29) | inst;
+    /*
+     * cast input and remove floating part
+     */
 
-	putfsl(inst, 0);
-	xil_printf("\nInstruction 0x%08x: stored X[%d][%d] = 0x%08x = %d", inst, i, j, x, x);
+    long int fix_part = (long int) Input;
+    /*
+     * remove integer part, multiply by 1000 to adjust to 3 decimal points then cast to integer
+     */
+    long int frac_part = (long int) (Input*1000.0 - fix_part*1000);
 
-	return inst;
+    xil_printf("%d", fix_part);
+    xil_printf(".%d\r\n", frac_part);
 }
 
-unsigned int store_y(int y, unsigned int i)
+// Copyright (c) 2018 Ricardo J. Jesus
+char *print_long_long(long long x)
 {
-	unsigned int inst = (y & 0x03ffffff);
-	inst = ((i << 26) & 0x1C000000) | inst;
-	inst = (OPCODE_STORE_Y << 29) | inst;
+	static char buf[21];
+	buf[20] = '\0';
+	int i = 19;
 
-	putfsl(inst, 0);
-	xil_printf("\nInstruction 0x%08x: stored Y[%d] = 0x%08x = %d", inst, i, y, y);
-
-	return inst;
-}
-
-unsigned int store_t(int t, unsigned int i)
-{
-	unsigned int inst = (t & 0x03ffffff);
-	inst = ((i << 26) & 0x1C000000) | inst;
-	inst = (OPCODE_STORE_T << 29) | inst;
-
-	putfsl(inst, 0);
-	xil_printf("\nInstruction 0x%08x: stored T[%d] = 0x%08x = %d", inst, i, t, t);
-
-	return inst;
-}
-
-unsigned int store_a(int a)
-{
-	unsigned int inst = (a & 0x03ffffff);
-	inst = (OPCODE_STORE_A << 29) | inst;
-
-	xil_printf("\nInstruction 0x%08x: stored alpha = 0x%08x = %d", inst, a, a);
-	putfsl(inst, 0);
-
-	return inst;
-}
-
-unsigned int compute(unsigned int iter)
-{
-	unsigned int inst = iter;
-	inst = (OPCODE_COMPUTE << 29) | inst;
-
-	putfsl(inst, 0);
-	xil_printf("\nInstruction 0x%08x: issued iteration %d of gradient descent", inst, iter);
-
-	return inst;
-}
-
-int abs(int i)
-{
-	return (i < 0 ? -i : i);
-}
-
-unsigned int has_converged(int Tnew[], int T[], int n)
-{
-	unsigned int flag = 1;
-
-	for(unsigned int i = 0; i < n; i++) {
-		if(abs(Tnew[i] - T[i]) > CONSTANT_THRESHOLD) {
-			flag = 0;
-		}
+	while(x) {
+		buf[i--] = '0' + (x % 10);
+		x /= 10;
 	}
 
-	return flag;
+	return &buf[i+1];
 }
 
-void print_model(int T[], int n)
+void toc()
 {
-	xil_printf("\nModel is y = ");
+	int period = 50; // one clock cycle in nanoseconds
+	int cycles = 100000; // an event is generated every 100000 cycles
+	long long res = ((long long)period)*irqCount*cycles;
+	xil_printf("\nElapsed time is estimated to be %s ns (%d interrupts)", print_long_long(res), irqCount);
+}
 
-	for (unsigned int i = 0; i < CONSTANT_N-1; i++) {
-		xil_printf("%d*x^%d + ", T[i], i);
-	}
+// Will be called at every timer output event
+void TimerIntCallbackHandler(void *CallbackRef)
+{
+	irqCount++;
+}
 
-	xil_printf("%d*x^%d", T[CONSTANT_N-1], CONSTANT_N-1);
+int SetupInterrupts(u32 IntcBaseAddress)
+{
+	/*
+	 * Connect a callback handler that will be called when an interrupt for the timer occurs,
+	 * to perform the specific interrupt processing for the timer.
+	 */
+	XIntc_RegisterHandler(IntcBaseAddress, FIT_TIMER_0_INT_ID, (XInterruptHandler)TimerIntCallbackHandler, (void *)0);
+
+	/*
+	 * Enable interrupts for all devices that cause interrupts, and enable
+	 * the INTC master enable bit.
+	 */
+	XIntc_EnableIntr(IntcBaseAddress, FIT_TIMER_0_INT_MASK);
+
+	/*
+	 * Set the master enable bit.
+	 */
+	XIntc_Out32(IntcBaseAddress + XIN_MER_OFFSET, XIN_INT_HARDWARE_ENABLE_MASK | XIN_INT_MASTER_ENABLE_MASK);
+
+	/*
+	 * This step is processor specific, connect the handler for the
+	 * interrupt controller to the interrupt source for the processor.
+	 */
+	Xil_ExceptionInit();
+
+	/*
+	 * Register the interrupt controller handler with the exception table.
+	 */
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT, (Xil_ExceptionHandler)XIntc_DeviceInterruptHandler, INTC_DEVICE_ID);
+
+	/*
+	 * Enable exceptions.
+	 */
+	Xil_ExceptionEnable();
+
+	return XST_SUCCESS;
 }
 
 int main()
 {
 	init_platform();
+
+	int status = SetupInterrupts(INTC_BASEADDR);
+	if (status != XST_SUCCESS) {
+		xil_printf("Setup interrupts failed\r\n");
+		cleanup_platform();
+		return XST_FAILURE;
+	}
+	xil_printf("Setup interrupts successful\r\n");
 
     int X[CONSTANT_M][CONSTANT_N] = {
     		{1*SCALING_FACTOR, 2.34*SCALING_FACTOR},
@@ -144,6 +149,7 @@ int main()
     int alpha = 0.01*SCALING_FACTOR;
 
     // Reset coprocessor
+    tic();
     reset();
 
     // Store X matrix
@@ -182,10 +188,11 @@ int main()
     	}
 
     	// Check if algorithm has converged
-		if(has_converged(Tnew, Told, CONSTANT_N)) break;
+		if(has_converged(Tnew, Told, CONSTANT_N, CONSTANT_THRESHOLD)) break;
 	}
 
 	reset();
+	toc();
 
 	xil_printf("\n\nAlgorithm converged in %d iterations.", iter);
 	print_model(T, CONSTANT_N);

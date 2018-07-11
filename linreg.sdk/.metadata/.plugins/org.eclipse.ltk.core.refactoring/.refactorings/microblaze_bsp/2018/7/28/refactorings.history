@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;Makefile&apos; to &apos;microblaze_bsp&apos;" description="Move &apos;Makefile&apos; to &apos;microblaze_bsp&apos;" destination="/microblaze_bsp" element1="/microblaze/Debug/Makefile" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1531327845814" updateReferences="true"/>
+</session>

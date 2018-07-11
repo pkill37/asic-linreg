@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
---Date        : Wed Jul 11 16:06:39 2018
+--Date        : Wed Jul 11 18:00:20 2018
 --Host        : faviouz running 64-bit unknown
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -1477,11 +1477,6 @@ architecture STRUCTURE of design_1 is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component design_1_rst_clk_wiz_1_100M_0;
-  component design_1_xlconstant_0_0 is
-  port (
-    dout : out STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  end component design_1_xlconstant_0_0;
   component design_1_axi_intc_0_0 is
   port (
     s_axi_aclk : in STD_LOGIC;
@@ -1551,6 +1546,13 @@ architecture STRUCTURE of design_1 is
     m00_axis_aresetn : in STD_LOGIC
   );
   end component design_1_gradientdescent_0_0;
+  component design_1_fit_timer_0_0 is
+  port (
+    Clk : in STD_LOGIC;
+    Rst : in STD_LOGIC;
+    Interrupt : out STD_LOGIC
+  );
+  end component design_1_fit_timer_0_0;
   signal ARESETN_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal S00_AXI_1_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal S00_AXI_1_ARPROT : STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -1609,6 +1611,7 @@ architecture STRUCTURE of design_1 is
   signal axi_uartlite_0_UART_RxD : STD_LOGIC;
   signal axi_uartlite_0_UART_TxD : STD_LOGIC;
   signal clk_wiz_1_locked : STD_LOGIC;
+  signal fit_timer_0_Interrupt : STD_LOGIC;
   signal gradientdescent_0_M00_AXIS_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal gradientdescent_0_M00_AXIS_TLAST : STD_LOGIC;
   signal gradientdescent_0_M00_AXIS_TREADY : STD_LOGIC;
@@ -1651,12 +1654,11 @@ architecture STRUCTURE of design_1 is
   signal rst_clk_wiz_1_100M_bus_struct_reset : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_clk_wiz_1_100M_mb_reset : STD_LOGIC;
   signal rst_clk_wiz_1_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal rst_clk_wiz_1_100M_peripheral_reset : STD_LOGIC_VECTOR ( 0 to 0 );
   signal sys_clock_1 : STD_LOGIC;
-  signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axi_uartlite_0_interrupt_UNCONNECTED : STD_LOGIC;
   signal NLW_gradientdescent_0_m00_axis_tstrb_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_microblaze_0_Interrupt_Ack_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 1 );
-  signal NLW_rst_clk_wiz_1_100M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   attribute BMM_INFO_PROCESSOR : string;
   attribute BMM_INFO_PROCESSOR of microblaze_0 : label is "microblaze-le > design_1 microblaze_0_local_memory/dlmb_bram_if_cntlr";
   attribute KEEP_HIERARCHY : string;
@@ -1676,7 +1678,7 @@ begin
   usb_uart_txd <= axi_uartlite_0_UART_TxD;
 axi_intc_0: component design_1_axi_intc_0_0
      port map (
-      intr(0) => xlconstant_0_dout(0),
+      intr(0) => fit_timer_0_Interrupt,
       irq => axi_intc_0_interrupt_INTERRUPT,
       s_axi_aclk => microblaze_0_Clk,
       s_axi_araddr(8 downto 0) => axi_interconnect_0_M01_AXI_ARADDR(8 downto 0),
@@ -1793,6 +1795,12 @@ clk_wiz_1: component design_1_clk_wiz_1_0
       clk_out1 => microblaze_0_Clk,
       locked => clk_wiz_1_locked,
       resetn => reset_1
+    );
+fit_timer_0: component design_1_fit_timer_0_0
+     port map (
+      Clk => microblaze_0_Clk,
+      Interrupt => fit_timer_0_Interrupt,
+      Rst => rst_clk_wiz_1_100M_peripheral_reset(0)
     );
 gradientdescent_0: component design_1_gradientdescent_0_0
      port map (
@@ -1921,11 +1929,7 @@ rst_clk_wiz_1_100M: component design_1_rst_clk_wiz_1_100M_0
       mb_debug_sys_rst => mdm_1_debug_sys_rst,
       mb_reset => rst_clk_wiz_1_100M_mb_reset,
       peripheral_aresetn(0) => rst_clk_wiz_1_100M_peripheral_aresetn(0),
-      peripheral_reset(0) => NLW_rst_clk_wiz_1_100M_peripheral_reset_UNCONNECTED(0),
+      peripheral_reset(0) => rst_clk_wiz_1_100M_peripheral_reset(0),
       slowest_sync_clk => microblaze_0_Clk
-    );
-xlconstant_0: component design_1_xlconstant_0_0
-     port map (
-      dout(0) => xlconstant_0_dout(0)
     );
 end STRUCTURE;

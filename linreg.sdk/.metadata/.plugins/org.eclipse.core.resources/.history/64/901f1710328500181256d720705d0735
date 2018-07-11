@@ -1,0 +1,17 @@
+int abs(int i)
+{
+	return (i < 0 ? -i : i);
+}
+
+unsigned int has_converged(int Tnew[], int T[], int n, int threshold)
+{
+	unsigned int flag = 1;
+
+	for(unsigned int i = 0; i < n; i++) {
+		if(abs(Tnew[i] - T[i]) > threshold) {
+			flag = 0;
+		}
+	}
+
+	return flag;
+}

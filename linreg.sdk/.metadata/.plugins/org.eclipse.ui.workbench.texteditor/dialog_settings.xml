@@ -8,6 +8,8 @@
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="hello"/>
+			<item value="PUSH"/>
 			<item value="\t"/>
 		</list>
 		<list key="replacehistory">

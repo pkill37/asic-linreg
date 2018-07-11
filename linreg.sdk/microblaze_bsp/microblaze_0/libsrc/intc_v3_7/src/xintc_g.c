@@ -59,6 +59,10 @@ XIntc_Config XIntc_ConfigTable[] =
 		XIN_SVC_SGL_ISR_OPTION,
 		XPAR_AXI_INTC_0_TYPE,
 		{
+			{
+				XNullHandler,
+				(void *) XNULL
+			}
 		}
 
 	}

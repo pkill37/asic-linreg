@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
-| Date             : Wed Jul 11 16:13:12 2018
+| Date             : Wed Jul 11 18:05:47 2018
 | Host             : faviouz running 64-bit unknown
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.245        |
+| Total On-Chip Power (W)  | 0.244        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.147        |
+| Dynamic (W)              | 0.146        |
 | Device Static (W)        | 0.098        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 83.9         |
@@ -52,22 +52,22 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.003 |        7 |       --- |             --- |
-| Slice Logic              |     0.004 |     7606 |       --- |             --- |
-|   LUT as Logic           |     0.004 |     4009 |     63400 |            6.32 |
+| Clocks                   |     0.004 |        7 |       --- |             --- |
+| Slice Logic              |     0.004 |     7648 |       --- |             --- |
+|   LUT as Logic           |     0.004 |     4021 |     63400 |            6.34 |
 |   CARRY4                 |    <0.001 |      597 |     15850 |            3.77 |
 |   LUT as Distributed RAM |    <0.001 |       64 |     19000 |            0.34 |
-|   Register               |    <0.001 |     1710 |    126800 |            1.35 |
+|   Register               |    <0.001 |     1719 |    126800 |            1.36 |
 |   F7/F8 Muxes            |    <0.001 |      108 |     63400 |            0.17 |
-|   LUT as Shift Register  |    <0.001 |       75 |     19000 |            0.39 |
-|   Others                 |    <0.001 |      501 |       --- |             --- |
-| Signals                  |     0.011 |    10830 |       --- |             --- |
+|   LUT as Shift Register  |    <0.001 |       81 |     19000 |            0.43 |
+|   Others                 |    <0.001 |      512 |       --- |             --- |
+| Signals                  |     0.010 |    10851 |       --- |             --- |
 | Block RAM                |     0.001 |       16 |       135 |           11.85 |
 | MMCM                     |     0.112 |        1 |         6 |           16.67 |
 | DSPs                     |     0.015 |      104 |       240 |           43.33 |
 | I/O                      |    <0.001 |        4 |       210 |            1.90 |
 | Static Power             |     0.098 |          |           |                 |
-| Total                    |     0.245 |          |           |                 |
+| Total                    |     0.244 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.051 |       0.035 |      0.016 |
+| Vccint    |       1.000 |     0.050 |       0.034 |      0.016 |
 | Vccaux    |       1.800 |     0.080 |       0.062 |      0.018 |
 | Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -150,8 +150,8 @@ Table of Contents
 +------------------------------------------------------------------------------------+-----------+
 | Name                                                                               | Power (W) |
 +------------------------------------------------------------------------------------+-----------+
-| design_1_wrapper                                                                   |     0.147 |
-|   design_1_i                                                                       |     0.147 |
+| design_1_wrapper                                                                   |     0.146 |
+|   design_1_i                                                                       |     0.146 |
 |     axi_intc_0                                                                     |    <0.001 |
 |       U0                                                                           |    <0.001 |
 |         AXI_LITE_IPIF_I                                                            |    <0.001 |
@@ -191,13 +191,21 @@ Table of Contents
 |                 DYNSHREG_F_I                                                       |    <0.001 |
 |     clk_wiz_1                                                                      |     0.112 |
 |       inst                                                                         |     0.112 |
-|     gradientdescent_0                                                              |     0.029 |
-|       U0                                                                           |     0.028 |
+|     fit_timer_0                                                                    |    <0.001 |
+|       U0                                                                           |    <0.001 |
+|         Using_SRL16s.SRL16s[1].Divide_I                                            |    <0.001 |
+|         Using_SRL16s.SRL16s[2].Divide_I                                            |    <0.001 |
+|         Using_SRL16s.SRL16s[3].Divide_I                                            |    <0.001 |
+|         Using_SRL16s.SRL16s[4].Divide_I                                            |    <0.001 |
+|         Using_SRL16s.SRL16s[5].Divide_I                                            |    <0.001 |
+|         Using_SRL16s.SRL16s[6].Divide_I                                            |    <0.001 |
+|     gradientdescent_0                                                              |     0.027 |
+|       U0                                                                           |     0.027 |
 |         gradientdescent_v1_0_M00_AXIS_inst                                         |    <0.001 |
-|         gradientdescent_v1_0_S00_AXIS_inst                                         |     0.028 |
-|           mini_batch_gradient_descent                                              |     0.028 |
+|         gradientdescent_v1_0_S00_AXIS_inst                                         |     0.027 |
+|           mini_batch_gradient_descent                                              |     0.027 |
 |             h                                                                      |     0.010 |
-|             t1                                                                     |     0.015 |
+|             t1                                                                     |     0.014 |
 |             t2                                                                     |     0.003 |
 |     mdm_1                                                                          |    <0.001 |
 |       U0                                                                           |    <0.001 |
@@ -1029,7 +1037,6 @@ Table of Contents
 |           ACTIVE_LOW_EXT.ACT_LO_EXT                                                |    <0.001 |
 |         SEQ                                                                        |    <0.001 |
 |           SEQ_COUNTER                                                              |    <0.001 |
-|     xlconstant_0                                                                   |     0.000 |
 +------------------------------------------------------------------------------------+-----------+
 
 

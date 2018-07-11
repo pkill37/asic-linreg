@@ -61,6 +61,7 @@ set_property used_in_implementation false [get_files -all /home/fabio/Desktop/li
 set_property used_in_implementation false [get_files -all /home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ip/design_1_fit_timer_0_0/design_1_fit_timer_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being

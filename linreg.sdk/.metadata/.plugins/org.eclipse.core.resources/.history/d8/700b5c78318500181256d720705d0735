@@ -1,0 +1,34 @@
+#ifndef __PLATFORM_CONFIG_H_
+#define __PLATFORM_CONFIG_H_
+
+unsigned int reset()
+{
+	unsigned int inst = 0; // don't care
+	inst = ((OPCODE_RESET << 29) | inst);
+
+	xil_printf("\nInstruction 0x%08x: reset coprocessor registers and state", inst);
+	putfsl(inst, 0);
+
+	return inst;
+}
+
+unsigned int store_x(int x, unsigned int i, unsigned int j)
+{
+	unsigned int inst = (x & 0x007fffff);
+	inst = ((j << 23) & 0x03800000) | inst;
+	inst = ((i << 26) & 0x1C000000) | inst;
+	inst = (OPCODE_STORE_X << 29) | inst;
+
+	putfsl(inst, 0);
+	xil_printf("\nInstruction 0x%08x: stored X[%d][%d] = 0x%08x = %d", inst, i, j, x, x);
+
+	return inst;
+}
+
+unsigned int store_y(int y, unsigned int i);
+unsigned int store_t(int t, unsigned int i);
+unsigned int store_a(int a);
+unsigned int compute(unsigned int iter);
+
+
+#endif

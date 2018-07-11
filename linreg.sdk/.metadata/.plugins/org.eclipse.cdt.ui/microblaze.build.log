@@ -1,6 +1,21 @@
-16:23:56 **** Incremental Build of configuration Debug for project microblaze ****
+19:59:19 **** Auto Build of configuration Debug for project microblaze ****
 make all 
-make: Nothing to be done for 'all'.
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19440	    312	   3136	  22888	   5968	microblaze.elf
+Finished building: microblaze.elf.size
+ 
 
-16:23:56 Build Finished (took 70ms)
+19:59:19 Build Finished (took 166ms)
 

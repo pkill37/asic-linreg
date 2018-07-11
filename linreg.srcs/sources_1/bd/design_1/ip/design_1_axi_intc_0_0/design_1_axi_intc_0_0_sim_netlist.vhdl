@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
--- Date        : Tue Jul  3 20:10:30 2018
+-- Date        : Wed Jul 11 18:01:43 2018
 -- Host        : faviouz running 64-bit unknown
--- Command     : write_vhdl -force -mode funcsim -rename_top design_1_axi_intc_0_0 -prefix
---               design_1_axi_intc_0_0_ design_1_axi_intc_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0_sim_netlist.vhdl
 -- Design      : design_1_axi_intc_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -54,6 +54,8 @@ entity design_1_axi_intc_0_0_address_decoder is
     \REG_GEN[0].IAR_NORMAL_MODE_GEN.iar_reg[0]_0\ : in STD_LOGIC;
     bus2ip_rnw_i_reg : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_intc_0_0_address_decoder : entity is "address_decoder";
 end design_1_axi_intc_0_0_address_decoder;
 
 architecture STRUCTURE of design_1_axi_intc_0_0_address_decoder is
@@ -753,8 +755,8 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_axi_intc_0_0_intc_core is
   port (
-    p_0_in : out STD_LOGIC;
     ipr : out STD_LOGIC_VECTOR ( 0 to 0 );
+    p_0_in : out STD_LOGIC;
     ivr : out STD_LOGIC;
     \REG_GEN[0].isr_reg[0]_0\ : out STD_LOGIC;
     p_0_in_0 : out STD_LOGIC;
@@ -777,10 +779,12 @@ entity design_1_axi_intc_0_0_intc_core is
     intr : in STD_LOGIC_VECTOR ( 0 to 0 );
     p_15_in : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_intc_0_0_intc_core : entity is "intc_core";
 end design_1_axi_intc_0_0_intc_core;
 
 architecture STRUCTURE of design_1_axi_intc_0_0_intc_core is
-  signal \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.hw_intr[0]_i_1_n_0\ : STD_LOGIC;
+  signal \INTR_DETECT_GEN[0].LVL_DETECT_GEN.hw_intr[0]_i_1_n_0\ : STD_LOGIC;
   signal \IPR_GEN.ipr[0]_i_1_n_0\ : STD_LOGIC;
   signal \IRQ_LEVEL_GEN.IRQ_LEVEL_NORMAL_ON_AXI_CLK_GEN.Irq_i_1_n_0\ : STD_LOGIC;
   signal \REG_GEN[0].ier[0]_i_1_n_0\ : STD_LOGIC;
@@ -791,10 +795,6 @@ architecture STRUCTURE of design_1_axi_intc_0_0_intc_core is
   signal \^cie\ : STD_LOGIC;
   signal hw_intr : STD_LOGIC;
   signal \^ier\ : STD_LOGIC;
-  signal intr_d1 : STD_LOGIC;
-  signal intr_ff : STD_LOGIC_VECTOR ( 0 to 1 );
-  attribute async_reg : string;
-  attribute async_reg of intr_ff : signal is "true";
   signal \^ipr\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \^irq\ : STD_LOGIC;
   signal \^isr\ : STD_LOGIC;
@@ -803,15 +803,11 @@ architecture STRUCTURE of design_1_axi_intc_0_0_intc_core is
   signal \^p_0_in_0\ : STD_LOGIC;
   signal p_1_in : STD_LOGIC;
   signal \^sie\ : STD_LOGIC;
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff_reg[0]\ : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff_reg[0]\ : label is "yes";
-  attribute ASYNC_REG_boolean of \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff_reg[1]\ : label is std.standard.true;
-  attribute KEEP of \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff_reg[1]\ : label is "yes";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \IRQ_LEVEL_GEN.IRQ_LEVEL_NORMAL_ON_AXI_CLK_GEN.Irq_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \REG_GEN[0].ier[0]_i_2\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \INTR_DETECT_GEN[0].LVL_DETECT_GEN.hw_intr[0]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \IRQ_LEVEL_GEN.IRQ_LEVEL_NORMAL_ON_AXI_CLK_GEN.Irq_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \REG_GEN[0].ier[0]_i_2\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \REG_GEN[0].isr[0]_i_1\ : label is "soft_lutpair16";
 begin
   \REG_GEN[0].isr_reg[0]_0\ <= \^reg_gen[0].isr_reg[0]_0\;
   cie <= \^cie\;
@@ -831,55 +827,24 @@ begin
       Q => \^cie\,
       R => '0'
     );
-\INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff_reg[0]\: unisim.vcomponents.FDRE
+\INTR_DETECT_GEN[0].LVL_DETECT_GEN.hw_intr[0]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => intr(0),
-      Q => intr_ff(0),
-      R => '0'
-    );
-\INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff_reg[1]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => intr_ff(0),
-      Q => intr_ff(1),
-      R => '0'
-    );
-\INTR_DETECT_GEN[0].EDGE_DETECT_GEN.hw_intr[0]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"0000AE00"
+      INIT => X"00E0"
     )
         port map (
       I0 => hw_intr,
-      I1 => intr_ff(1),
-      I2 => intr_d1,
-      I3 => s_axi_aresetn,
-      I4 => \^reg_gen[0].isr_reg[0]_0\,
-      O => \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.hw_intr[0]_i_1_n_0\
+      I1 => intr(0),
+      I2 => s_axi_aresetn,
+      I3 => \^reg_gen[0].isr_reg[0]_0\,
+      O => \INTR_DETECT_GEN[0].LVL_DETECT_GEN.hw_intr[0]_i_1_n_0\
     );
-\INTR_DETECT_GEN[0].EDGE_DETECT_GEN.hw_intr_reg[0]\: unisim.vcomponents.FDRE
+\INTR_DETECT_GEN[0].LVL_DETECT_GEN.hw_intr_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => s_axi_aclk,
       CE => '1',
-      D => \INTR_DETECT_GEN[0].EDGE_DETECT_GEN.hw_intr[0]_i_1_n_0\,
+      D => \INTR_DETECT_GEN[0].LVL_DETECT_GEN.hw_intr[0]_i_1_n_0\,
       Q => hw_intr,
       R => '0'
-    );
-\INTR_DETECT_GEN[0].EDGE_DETECT_GEN.intr_d1_reg\: unisim.vcomponents.FDRE
-     port map (
-      C => s_axi_aclk,
-      CE => '1',
-      D => intr_ff(1),
-      Q => intr_d1,
-      R => \^p_0_in\
     );
 \IPR_GEN.ipr[0]_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -1087,6 +1052,8 @@ entity design_1_axi_intc_0_0_slave_attachment is
     cie : in STD_LOGIC;
     \REG_GEN[0].IAR_NORMAL_MODE_GEN.iar_reg[0]_0\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_intc_0_0_slave_attachment : entity is "slave_attachment";
 end design_1_axi_intc_0_0_slave_attachment;
 
 architecture STRUCTURE of design_1_axi_intc_0_0_slave_attachment is
@@ -1795,6 +1762,8 @@ entity design_1_axi_intc_0_0_axi_lite_ipif is
     cie : in STD_LOGIC;
     \REG_GEN[0].IAR_NORMAL_MODE_GEN.iar_reg[0]_0\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_intc_0_0_axi_lite_ipif : entity is "axi_lite_ipif";
 end design_1_axi_intc_0_0_axi_lite_ipif;
 
 architecture STRUCTURE of design_1_axi_intc_0_0_axi_lite_ipif is
@@ -1883,7 +1852,7 @@ entity design_1_axi_intc_0_0_axi_intc is
     processor_ack_out : out STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   attribute C_ASYNC_INTR : integer;
-  attribute C_ASYNC_INTR of design_1_axi_intc_0_0_axi_intc : entity is -1;
+  attribute C_ASYNC_INTR of design_1_axi_intc_0_0_axi_intc : entity is -2;
   attribute C_CASCADE_MASTER : integer;
   attribute C_CASCADE_MASTER of design_1_axi_intc_0_0_axi_intc : entity is 0;
   attribute C_DISABLE_SYNCHRONIZERS : integer;
@@ -1917,7 +1886,7 @@ entity design_1_axi_intc_0_0_axi_intc is
   attribute C_KIND_OF_EDGE : integer;
   attribute C_KIND_OF_EDGE of design_1_axi_intc_0_0_axi_intc : entity is -1;
   attribute C_KIND_OF_INTR : integer;
-  attribute C_KIND_OF_INTR of design_1_axi_intc_0_0_axi_intc : entity is -1;
+  attribute C_KIND_OF_INTR of design_1_axi_intc_0_0_axi_intc : entity is -2;
   attribute C_KIND_OF_LVL : integer;
   attribute C_KIND_OF_LVL of design_1_axi_intc_0_0_axi_intc : entity is -1;
   attribute C_MB_CLK_NOT_CONNECTED : integer;
@@ -1932,6 +1901,8 @@ entity design_1_axi_intc_0_0_axi_intc is
   attribute C_S_AXI_ADDR_WIDTH of design_1_axi_intc_0_0_axi_intc : entity is 9;
   attribute C_S_AXI_DATA_WIDTH : integer;
   attribute C_S_AXI_DATA_WIDTH of design_1_axi_intc_0_0_axi_intc : entity is 32;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_intc_0_0_axi_intc : entity is "axi_intc";
   attribute hdl : string;
   attribute hdl of design_1_axi_intc_0_0_axi_intc : entity is "VHDL";
   attribute imp_netlist : string;
@@ -2211,7 +2182,7 @@ architecture STRUCTURE of design_1_axi_intc_0_0 is
   signal NLW_U0_interrupt_address_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_U0_processor_ack_out_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   attribute C_ASYNC_INTR : integer;
-  attribute C_ASYNC_INTR of U0 : label is -1;
+  attribute C_ASYNC_INTR of U0 : label is -2;
   attribute C_CASCADE_MASTER : integer;
   attribute C_CASCADE_MASTER of U0 : label is 0;
   attribute C_DISABLE_SYNCHRONIZERS : integer;
@@ -2245,7 +2216,7 @@ architecture STRUCTURE of design_1_axi_intc_0_0 is
   attribute C_KIND_OF_EDGE : integer;
   attribute C_KIND_OF_EDGE of U0 : label is -1;
   attribute C_KIND_OF_INTR : integer;
-  attribute C_KIND_OF_INTR of U0 : label is -1;
+  attribute C_KIND_OF_INTR of U0 : label is -2;
   attribute C_KIND_OF_LVL : integer;
   attribute C_KIND_OF_LVL of U0 : label is -1;
   attribute C_MB_CLK_NOT_CONNECTED : integer;

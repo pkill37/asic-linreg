@@ -8,14 +8,20 @@ LD_SRCS += \
 
 C_SRCS += \
 ../src/helloworld.c \
+../src/instructions.c \
+../src/linreg.c \
 ../src/platform.c 
 
 OBJS += \
 ./src/helloworld.o \
+./src/instructions.o \
+./src/linreg.o \
 ./src/platform.o 
 
 C_DEPS += \
 ./src/helloworld.d \
+./src/instructions.d \
+./src/linreg.d \
 ./src/platform.d 
 
 
