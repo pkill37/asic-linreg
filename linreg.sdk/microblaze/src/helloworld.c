@@ -20,6 +20,7 @@
 #define CONSTANT_N 2
 #define SCALING_FACTOR 2048
 #define CONSTANT_THRESHOLD 1
+#define CONSTANT_GRADIENT_DESCENT_ITERATIONS 1000
 
 static int irqCount = 0;
 
@@ -64,7 +65,7 @@ void toc()
 	int period = 50; // one clock cycle in nanoseconds
 	int cycles = 100000; // an event is generated every 100000 cycles
 	long long res = ((long long)period)*irqCount*cycles;
-	xil_printf("\nElapsed time is estimated to be %s ns (%d interrupts)", print_long_long(res), irqCount);
+	xil_printf("\nElapsed time is estimated to be %s ns = %d timer events", print_long_long(res), irqCount);
 }
 
 // Will be called at every timer output event
@@ -111,6 +112,140 @@ int SetupInterrupts(u32 IntcBaseAddress)
 	return XST_SUCCESS;
 }
 
+void linreg_software(int X[CONSTANT_M][CONSTANT_N], int Y[], int T[], int alpha, int m, int n)
+{
+	int scalar;
+	int hypothesis[m];
+	//fill array
+	for(int i = 0; i < m; i++){
+		hypothesis[i]=0;
+	}
+
+	int err[m];
+	//fill array
+	for(int i = 0; i < m; i++){
+		err[i] = 0;
+	}
+
+	int tmp1[n];
+	//fill array
+	for(int i = 0; i < n; i++){
+		tmp1[i] = 0;
+	}
+
+	int tmp2[n];
+	//fill array
+	for(int i = 0; i < n; i++){
+		tmp2[i]=0;
+	}
+
+	//transpose matrix X
+	int X_transpose[n][m];
+	for(int i = 0; i < n; i++) {
+		for(int j = 0; j < m; j++) {
+			X_transpose[i][j] = X[j][i];
+		}
+	}
+
+	int iter;
+	for(iter = 0; iter < CONSTANT_GRADIENT_DESCENT_ITERATIONS; iter++)
+	{
+		//X*theta
+		for(int i = 0; i < m; i++){
+			for(int j = 0; j < n; j++){
+				hypothesis[i] += X[i][j]*T[j];
+			}
+		}
+		for(int i = 0; i < m; i++){
+			hypothesis[i] = hypothesis[i] >> 11;
+		}
+
+		//hypothesis - Y
+		for(int i = 0; i < m; i++){
+			err[i] = hypothesis[i] - Y[i];
+		}
+		//X' * err
+		for(int i = 0; i < n; i++){
+			for(int j = 0; j < m; j++){
+				tmp1[i] += X_transpose[i][j] * err[j];
+			}
+		}
+		for(int i = 0; i < n; i++){
+			tmp1[i] = tmp1[i] >> 11;
+		}
+
+		//alpha/m
+		scalar = alpha/m;
+		//tmp1 * scalar
+		for(int i = 0; i < n; i++){
+			tmp2[i] = (tmp1[i] * scalar) >> 11;
+		}
+
+		//theta - tmp2
+		int Told[n];
+		for(int i = 0; i < n; i++){
+			Told[i] = T[i];
+			T[i] = T[i] - tmp2[i];
+		}
+
+		if(has_converged(T, Told, n, CONSTANT_THRESHOLD)) break;
+	}
+
+	print_model(T, n);
+	xil_printf(" Algorithm converged in %d iterations.", iter);
+}
+
+void linreg_hardware(int X[CONSTANT_M][CONSTANT_N], int Y[], int T[], int alpha, int m, int n)
+{
+	// Reset processor
+	reset();
+
+	// Store X matrix
+	for (unsigned int i = 0; i < m; i++) {
+		for (unsigned int j = 0; j < n; j++) {
+			store_x(X[i][j], i, j);
+		}
+	}
+
+	// Store Y vector
+	for (unsigned int i = 0; i < m; i++) {
+		store_y(Y[i], i);
+	}
+
+	// Store theta vector
+	for (unsigned int i = 0; i < n; i++) {
+		store_t(T[i], i);
+	}
+
+	// Store learning rate value
+	store_a(alpha);
+
+	// Run gradient descent for linear regression until the algorithm converges
+	int iter;
+	for (iter = 0; iter < CONSTANT_GRADIENT_DESCENT_ITERATIONS; iter++) {
+		// Issue new iteration of gradient descent
+		compute(iter+1);
+
+		// Retrieve new theta vector
+		int Tnew[n];
+		int Told[n];
+		for (int l = 0; l < n; l++) {
+			getfsl(Tnew[l], 0);
+			Told[l] = T[l];
+			T[l] = Tnew[l];
+		}
+
+		// Check if algorithm has converged
+		if(has_converged(Tnew, Told, n, CONSTANT_THRESHOLD)) break;
+	}
+
+	// Reset processor
+	reset();
+
+	print_model(T, n);
+	xil_printf(" Algorithm converged in %d iterations.", iter);
+}
+
 int main()
 {
 	init_platform();
@@ -121,7 +256,6 @@ int main()
 		cleanup_platform();
 		return XST_FAILURE;
 	}
-	xil_printf("Setup interrupts successful\r\n");
 
     int X[CONSTANT_M][CONSTANT_N] = {
     		{1*SCALING_FACTOR, 2.34*SCALING_FACTOR},
@@ -142,60 +276,32 @@ int main()
     };
 
     int T[CONSTANT_N] = {
-    		1.01*SCALING_FACTOR,
+			1.01*SCALING_FACTOR,
 			2.02*SCALING_FACTOR
-    };
+	};
 
     int alpha = 0.01*SCALING_FACTOR;
 
-    // Reset coprocessor
+    xil_printf("\n\n=====================================================");
+    xil_printf("\n=            SOFTWARE IMPLEMENTATION");
+    xil_printf("\n=====================================================\n");
+
     tic();
-    reset();
+    linreg_software(X, Y, T, alpha, CONSTANT_M, CONSTANT_N);
+    toc();
 
-    // Store X matrix
-    for (unsigned int i = 0; i < CONSTANT_M; i++) {
-        for (unsigned int j = 0; j < CONSTANT_N; j++) {
-        	store_x(X[i][j], i, j);
-		}
-    }
+    xil_printf("\n\n=====================================================");
+	xil_printf("\n=            HARDWARE IMPLEMENTATION");
+	xil_printf("\n=====================================================\n");
 
-    // Store Y vector
-	for (unsigned int i = 0; i < CONSTANT_M; i++) {
-		store_y(Y[i], i);
-	}
+	int T2[CONSTANT_N] = {
+			1.01*SCALING_FACTOR,
+			2.02*SCALING_FACTOR
+	};
 
-	// Store theta vector
-	for (unsigned int i = 0; i < CONSTANT_N; i++) {
-		store_t(T[i], i);
-	}
-
-	// Store learning rate value
-	store_a(alpha);
-
-	// Run gradient descent for linear regression until the algorithm converges
-	int iter;
-	for (iter = 1; iter < 1000; iter++) {
-		// Issue new iteration of gradient descent
-    	compute(iter);
-
-        // Retrieve new theta vector
-    	int Tnew[CONSTANT_N];
-    	int Told[CONSTANT_N];
-    	for (int l = 0; l < CONSTANT_N; l++) {
-    		getfsl(Tnew[l], 0);
-    		Told[l] = T[l];
-    		T[l] = Tnew[l];
-    	}
-
-    	// Check if algorithm has converged
-		if(has_converged(Tnew, Told, CONSTANT_N, CONSTANT_THRESHOLD)) break;
-	}
-
-	reset();
-	toc();
-
-	xil_printf("\n\nAlgorithm converged in %d iterations.", iter);
-	print_model(T, CONSTANT_N);
+    tic();
+    linreg_hardware(X, Y, T2, alpha, CONSTANT_M, CONSTANT_N);
+    toc();
 
     cleanup_platform();
     return 0;

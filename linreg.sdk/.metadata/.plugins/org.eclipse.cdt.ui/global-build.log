@@ -10790,3 +10790,2365 @@ mb-size microblaze.elf  |tee "microblaze.elf.size"
   19440	    312	   3136	  22888	   5968	microblaze.elf
 Finished building: microblaze.elf.size
  
+20:06:01 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/linreg.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/linreg.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/linreg.d" -MT"src/linreg.o" -o "src/linreg.o" "../src/linreg.c"
+Finished building: ../src/linreg.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19440	    312	   3136	  22888	   5968	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:07:09 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:115:1: error: array type has incomplete element type 'int[]'
+ int linreg_software(int[][] X, int[] Y, int[] T, int alpha, int m, int n)
+ ^~~
+../src/helloworld.c:115:1: note: declaration of multidimensional array must have bounds for all dimensions except the first
+../src/helloworld.c:115:29: error: expected ';', ',' or ')' before 'X'
+ int linreg_software(int[][] X, int[] Y, int[] T, int alpha, int m, int n)
+                             ^
+../src/helloworld.c:213:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+20:07:23 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:115:1: error: array type has incomplete element type 'int[]'
+ int linreg_software(int[][] X, int[] Y, int[] T, int alpha, int m, int n)
+ ^~~
+../src/helloworld.c:115:1: note: declaration of multidimensional array must have bounds for all dimensions except the first
+../src/helloworld.c:115:29: error: expected ';', ',' or ')' before 'X'
+ int linreg_software(int[][] X, int[] Y, int[] T, int alpha, int m, int n)
+                             ^
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+20:07:41 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:114:1: error: array type has incomplete element type 'int[]'
+ int linreg_software(int[][] X, int[] Y, int[] T, int alpha, int m, int n)
+ ^~~
+../src/helloworld.c:114:1: note: declaration of multidimensional array must have bounds for all dimensions except the first
+../src/helloworld.c:114:29: error: expected ';', ',' or ')' before 'X'
+ int linreg_software(int[][] X, int[] Y, int[] T, int alpha, int m, int n)
+                             ^
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+20:07:50 **** Clean-only build of configuration Debug for project microblaze ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o  ./src/helloworld.d ./src/instructions.d ./src/linreg.d ./src/platform.d  microblaze.elf.size  microblaze.elf
+ 
+20:07:50 **** Clean-only build of project microblaze_bsp ****
+make -k clean 
+make -C microblaze_0/libsrc/cpu_v2_6/src -s clean 
+make -C microblaze_0/libsrc/standalone_v6_5/src -s clean 
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s clean 
+make -C microblaze_0/libsrc/bram_v4_2/src -s clean 
+make -C microblaze_0/libsrc/intc_v3_7/src -s clean 
+rm -f microblaze_0/lib/libxil.a
+20:07:51 **** Build of project microblaze_bsp ****
+make -k all 
+Running Make include in microblaze_0/libsrc/cpu_v2_6/src
+Running Make include in microblaze_0/libsrc/standalone_v6_5/src
+Running Make include in microblaze_0/libsrc/uartlite_v3_2/src
+make -C microblaze_0/libsrc/standalone_v6_5/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+make -C microblaze_0/libsrc/cpu_v2_6/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/bram_v4_2/src
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/intc_v3_7/src
+make -C microblaze_0/libsrc/intc_v3_7/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make libs in microblaze_0/libsrc/cpu_v2_6/src
+Running Make libs in microblaze_0/libsrc/standalone_v6_5/src
+make -C microblaze_0/libsrc/standalone_v6_5/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make libs in microblaze_0/libsrc/bram_v4_2/src
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+make -C microblaze_0/libsrc/cpu_v2_6/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling uartlite
+Compiling standalone
+Compiling bram
+Compiling cpu
+mb-ar: creating ../../../lib/libxil.a
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Running Make libs in microblaze_0/libsrc/intc_v3_7/src
+make -C microblaze_0/libsrc/intc_v3_7/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling intc
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Finished building libraries
+20:07:52 **** Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Building file: ../src/linreg.c
+Building file: ../src/instructions.c
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Invoking: MicroBlaze gcc compiler
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/instructions.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/instructions.d" -MT"src/instructions.o" -o "src/instructions.o" "../src/instructions.c"
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/linreg.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/linreg.d" -MT"src/linreg.o" -o "src/linreg.o" "../src/linreg.c"
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+../src/helloworld.c:114:1: error: array type has incomplete element type 'int[]'
+ int linreg_software(int[][] X, int[] Y, int[] T, int alpha, int m, int n)
+ ^~~
+../src/helloworld.c:114:1: note: declaration of multidimensional array must have bounds for all dimensions except the first
+../src/helloworld.c:114:29: error: expected ';', ',' or ')' before 'X'
+ int linreg_software(int[][] X, int[] Y, int[] T, int alpha, int m, int n)
+                             ^
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+make: *** Waiting for unfinished jobs....
+Finished building: ../src/linreg.c
+Finished building: ../src/platform.c
+ 
+ 
+Finished building: ../src/instructions.c
+ 
+20:08:13 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:114:1: error: array type has incomplete element type 'int[]'
+ int linreg_software(int[][] X, int[] Y, int[] T, int alpha, int m, int n)
+ ^~~
+../src/helloworld.c:114:1: note: declaration of multidimensional array must have bounds for all dimensions except the first
+../src/helloworld.c:114:29: error: expected ';', ',' or ')' before 'X'
+ int linreg_software(int[][] X, int[] Y, int[] T, int alpha, int m, int n)
+                             ^
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+20:08:41 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:114:25: error: array type has incomplete element type 'int[]'
+ int linreg_software(int X[][], int Y[], int T[], int alpha, int m, int n)
+                         ^
+../src/helloworld.c:114:25: note: declaration of 'X' as multidimensional array must have bounds for all dimensions except the first
+../src/helloworld.c: In function 'linreg_software':
+../src/helloworld.c:211:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+20:09:06 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:114:1: error: array type has incomplete element type 'int[]'
+ int linreg_software(int[][]X, int Y[], int T[], int alpha, int m, int n)
+ ^~~
+../src/helloworld.c:114:1: note: declaration of multidimensional array must have bounds for all dimensions except the first
+../src/helloworld.c:114:28: error: expected ';', ',' or ')' before 'X'
+ int linreg_software(int[][]X, int Y[], int T[], int alpha, int m, int n)
+                            ^
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+20:09:15 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'linreg_software':
+../src/helloworld.c:211:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28400	   1352	   3192	  32944	   80b0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:09:24 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:114:1: error: array type has incomplete element type 'int[]'
+ int linreg_software(int [][]X, int Y[], int T[], int alpha, int m, int n)
+ ^~~
+../src/helloworld.c:114:1: note: declaration of multidimensional array must have bounds for all dimensions except the first
+../src/helloworld.c:114:29: error: expected ';', ',' or ')' before 'X'
+ int linreg_software(int [][]X, int Y[], int T[], int alpha, int m, int n)
+                             ^
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+20:09:50 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'linreg_software':
+../src/helloworld.c:211:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28400	   1352	   3192	  32944	   80b0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:10:07 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'linreg_software':
+../src/helloworld.c:211:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28400	   1352	   3192	  32944	   80b0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:10:24 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'linreg_software':
+../src/helloworld.c:211:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19524	    312	   3140	  22976	   59c0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:11:35 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'linreg_software':
+../src/helloworld.c:211:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19524	    312	   3140	  22976	   59c0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:12:37 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'linreg_software':
+../src/helloworld.c:210:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19524	    312	   3140	  22976	   59c0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:13:04 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'linreg_software':
+../src/helloworld.c:210:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19524	    312	   3140	  22976	   59c0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:13:09 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'linreg_software':
+../src/helloworld.c:210:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19524	    312	   3140	  22976	   59c0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:13:13 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'linreg_software':
+../src/helloworld.c:210:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19524	    312	   3140	  22976	   59c0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:13:19 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'linreg_software':
+../src/helloworld.c:211:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19524	    312	   3140	  22976	   59c0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:13:31 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'linreg_software':
+../src/helloworld.c:211:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19524	    312	   3140	  22976	   59c0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:13:39 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'linreg_software':
+../src/helloworld.c:211:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19524	    312	   3140	  22976	   59c0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:13:54 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'linreg_software':
+../src/helloworld.c:211:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19524	    312	   3140	  22976	   59c0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:14:31 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'linreg_software':
+../src/helloworld.c:211:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19524	    312	   3140	  22976	   59c0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:14:35 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'linreg_software':
+../src/helloworld.c:211:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19524	    312	   3140	  22976	   59c0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:14:53 **** Clean-only build of configuration Debug for project microblaze ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o  ./src/helloworld.d ./src/instructions.d ./src/linreg.d ./src/platform.d  microblaze.elf.size  microblaze.elf
+ 
+20:14:53 **** Clean-only build of project microblaze_bsp ****
+make -k clean 
+make -C microblaze_0/libsrc/cpu_v2_6/src -s clean 
+make -C microblaze_0/libsrc/standalone_v6_5/src -s clean 
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s clean 
+make -C microblaze_0/libsrc/bram_v4_2/src -s clean 
+make -C microblaze_0/libsrc/intc_v3_7/src -s clean 
+rm -f microblaze_0/lib/libxil.a
+20:14:53 **** Build of project microblaze_bsp ****
+make -k all 
+Running Make include in microblaze_0/libsrc/standalone_v6_5/src
+Running Make include in microblaze_0/libsrc/cpu_v2_6/src
+Running Make include in microblaze_0/libsrc/uartlite_v3_2/src
+make -C microblaze_0/libsrc/cpu_v2_6/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/bram_v4_2/src
+make -C microblaze_0/libsrc/standalone_v6_5/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/intc_v3_7/src
+make -C microblaze_0/libsrc/intc_v3_7/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make libs in microblaze_0/libsrc/cpu_v2_6/src
+Running Make libs in microblaze_0/libsrc/standalone_v6_5/src
+Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src
+Running Make libs in microblaze_0/libsrc/bram_v4_2/src
+make -C microblaze_0/libsrc/standalone_v6_5/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+make -C microblaze_0/libsrc/cpu_v2_6/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling uartlite
+Compiling cpu
+Compiling standalone
+Compiling bram
+mb-ar: creating ../../../lib/libxil.a
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Running Make libs in microblaze_0/libsrc/intc_v3_7/src
+make -C microblaze_0/libsrc/intc_v3_7/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling intc
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Finished building libraries
+20:14:54 **** Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Building file: ../src/instructions.c
+Invoking: MicroBlaze gcc compiler
+Building file: ../src/platform.c
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/instructions.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/instructions.d" -MT"src/instructions.o" -o "src/instructions.o" "../src/instructions.c"
+Building file: ../src/linreg.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/linreg.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/linreg.d" -MT"src/linreg.o" -o "src/linreg.o" "../src/linreg.c"
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+../src/helloworld.c: In function 'linreg_software':
+../src/helloworld.c:211:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/platform.c
+Finished building: ../src/linreg.c
+ 
+ 
+Finished building: ../src/instructions.c
+ 
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19524	    312	   3140	  22976	   59c0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:14:56 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:15:23 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:251:21: warning: passing argument 1 of 'linreg_software' from incompatible pointer type [-Wincompatible-pointer-types]
+     linreg_software(X, Y, T, alpha);
+                     ^
+../src/helloworld.c:114:5: note: expected 'int **' but argument is of type 'int (*)[2]'
+ int linreg_software(int **X, int *Y, int *T, int alpha, int m, int n)
+     ^~~~~~~~~~~~~~~
+../src/helloworld.c:251:5: error: too few arguments to function 'linreg_software'
+     linreg_software(X, Y, T, alpha);
+     ^~~~~~~~~~~~~~~
+../src/helloworld.c:114:5: note: declared here
+ int linreg_software(int **X, int *Y, int *T, int alpha, int m, int n)
+     ^~~~~~~~~~~~~~~
+../src/helloworld.c: In function 'linreg_software':
+../src/helloworld.c:211:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+20:15:42 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:251:21: warning: passing argument 1 of 'linreg_software' from incompatible pointer type [-Wincompatible-pointer-types]
+     linreg_software(X, Y, T, alpha, CONSTANT_M, CONSTANT_N);
+                     ^
+../src/helloworld.c:114:5: note: expected 'int **' but argument is of type 'int (*)[2]'
+ int linreg_software(int **X, int *Y, int *T, int alpha, int m, int n)
+     ^~~~~~~~~~~~~~~
+../src/helloworld.c: In function 'linreg_software':
+../src/helloworld.c:211:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23384	    312	   3136	  26832	   68d0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:15:57 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:16:53 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:17:08 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:20:08 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:251:21: warning: passing argument 1 of 'linreg_software' from incompatible pointer type [-Wincompatible-pointer-types]
+     linreg_software(X, Y, T, alpha, CONSTANT_M, CONSTANT_N);
+                     ^
+../src/helloworld.c:114:5: note: expected 'int **' but argument is of type 'int (*)[2]'
+ int linreg_software(int **X, int *Y, int *T, int alpha, int m, int n)
+     ^~~~~~~~~~~~~~~
+../src/helloworld.c: In function 'linreg_software':
+../src/helloworld.c:211:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23036	    396	   3144	  26576	   67d0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:20:25 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:20:34 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:21:06 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'linreg_software':
+../src/helloworld.c:211:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19524	    312	   3140	  22976	   59c0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:21:23 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19524	    312	   3140	  22976	   59c0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:22:07 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19524	    312	   3140	  22976	   59c0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:22:11 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:22:19 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:23:47 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/linreg.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/linreg.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/linreg.d" -MT"src/linreg.o" -o "src/linreg.o" "../src/linreg.c"
+Finished building: ../src/linreg.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19524	    312	   3140	  22976	   59c0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:24:21 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19524	    312	   3140	  22976	   59c0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:24:24 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:24:31 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:25:11 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/linreg.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/linreg.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/linreg.d" -MT"src/linreg.o" -o "src/linreg.o" "../src/linreg.c"
+Finished building: ../src/linreg.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19764	    312	   3140	  23216	   5ab0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:25:14 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/linreg.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/linreg.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/linreg.d" -MT"src/linreg.o" -o "src/linreg.o" "../src/linreg.c"
+Finished building: ../src/linreg.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19764	    312	   3140	  23216	   5ab0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:25:26 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:25:42 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:25:53 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19764	    312	   3140	  23216	   5ab0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:25:57 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:27:43 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'linreg_hardware':
+../src/helloworld.c:220:12: error: 'X' undeclared (first use in this function)
+    store_x(X[i][j], i, j);
+            ^
+../src/helloworld.c:220:12: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:226:11: error: 'Y' undeclared (first use in this function)
+   store_y(Y[i], i);
+           ^
+../src/helloworld.c:231:11: error: 'T' undeclared (first use in this function)
+   store_t(T[i], i);
+           ^
+../src/helloworld.c:235:10: error: 'alpha' undeclared (first use in this function)
+  store_a(alpha);
+          ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:303:58: error: 'iter' undeclared (first use in this function)
+  xil_printf("\n\nAlgorithm converged in %d iterations.", iter);
+                                                          ^~~~
+../src/helloworld.c:295:9: warning: unused variable 'alpha' [-Wunused-variable]
+     int alpha = 0.01*SCALING_FACTOR;
+         ^~~~~
+../src/helloworld.c:281:9: warning: unused variable 'Y' [-Wunused-variable]
+     int Y[CONSTANT_M] = {
+         ^
+../src/helloworld.c:272:9: warning: unused variable 'X' [-Wunused-variable]
+     int X[CONSTANT_M][CONSTANT_N] = {
+         ^
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+20:27:48 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'linreg_hardware':
+../src/helloworld.c:221:12: error: 'X' undeclared (first use in this function)
+    store_x(X[i][j], i, j);
+            ^
+../src/helloworld.c:221:12: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:227:11: error: 'Y' undeclared (first use in this function)
+   store_y(Y[i], i);
+           ^
+../src/helloworld.c:232:11: error: 'T' undeclared (first use in this function)
+   store_t(T[i], i);
+           ^
+../src/helloworld.c:236:10: error: 'alpha' undeclared (first use in this function)
+  store_a(alpha);
+          ^~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:304:58: error: 'iter' undeclared (first use in this function)
+  xil_printf("\n\nAlgorithm converged in %d iterations.", iter);
+                                                          ^~~~
+../src/helloworld.c:296:9: warning: unused variable 'alpha' [-Wunused-variable]
+     int alpha = 0.01*SCALING_FACTOR;
+         ^~~~~
+../src/helloworld.c:282:9: warning: unused variable 'Y' [-Wunused-variable]
+     int Y[CONSTANT_M] = {
+         ^
+../src/helloworld.c:273:9: warning: unused variable 'X' [-Wunused-variable]
+     int X[CONSTANT_M][CONSTANT_N] = {
+         ^
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+20:28:42 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:213:38: error: expected ';', ',' or ')' before 'Y'
+ void linreg_hardware(int **X, int [] Y, int[]T, int alpha, int m, int n)
+                                      ^
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:304:58: error: 'iter' undeclared (first use in this function)
+  xil_printf("\n\nAlgorithm converged in %d iterations.", iter);
+                                                          ^~~~
+../src/helloworld.c:304:58: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:296:9: warning: unused variable 'alpha' [-Wunused-variable]
+     int alpha = 0.01*SCALING_FACTOR;
+         ^~~~~
+../src/helloworld.c:282:9: warning: unused variable 'Y' [-Wunused-variable]
+     int Y[CONSTANT_M] = {
+         ^
+../src/helloworld.c:273:9: warning: unused variable 'X' [-Wunused-variable]
+     int X[CONSTANT_M][CONSTANT_N] = {
+         ^
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+20:28:52 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:213:38: error: expected ';', ',' or ')' before 'Y'
+ void linreg_hardware(int **X, int [] Y, int[]T, int alpha, int m, int n)
+                                      ^
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:304:58: error: 'iter' undeclared (first use in this function)
+  xil_printf("\n\nAlgorithm converged in %d iterations.", iter);
+                                                          ^~~~
+../src/helloworld.c:304:58: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:296:9: warning: unused variable 'alpha' [-Wunused-variable]
+     int alpha = 0.01*SCALING_FACTOR;
+         ^~~~~
+../src/helloworld.c:282:9: warning: unused variable 'Y' [-Wunused-variable]
+     int Y[CONSTANT_M] = {
+         ^
+../src/helloworld.c:273:9: warning: unused variable 'X' [-Wunused-variable]
+     int X[CONSTANT_M][CONSTANT_N] = {
+         ^
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+20:29:00 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:213:37: error: expected ';', ',' or ')' before 'Y'
+ void linreg_hardware(int **X, int []Y, int[]T, int alpha, int m, int n)
+                                     ^
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:304:58: error: 'iter' undeclared (first use in this function)
+  xil_printf("\n\nAlgorithm converged in %d iterations.", iter);
+                                                          ^~~~
+../src/helloworld.c:304:58: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:296:9: warning: unused variable 'alpha' [-Wunused-variable]
+     int alpha = 0.01*SCALING_FACTOR;
+         ^~~~~
+../src/helloworld.c:282:9: warning: unused variable 'Y' [-Wunused-variable]
+     int Y[CONSTANT_M] = {
+         ^
+../src/helloworld.c:273:9: warning: unused variable 'X' [-Wunused-variable]
+     int X[CONSTANT_M][CONSTANT_N] = {
+         ^
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+20:29:14 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:304:58: error: 'iter' undeclared (first use in this function)
+  xil_printf("\n\nAlgorithm converged in %d iterations.", iter);
+                                                          ^~~~
+../src/helloworld.c:304:58: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:296:9: warning: unused variable 'alpha' [-Wunused-variable]
+     int alpha = 0.01*SCALING_FACTOR;
+         ^~~~~
+../src/helloworld.c:282:9: warning: unused variable 'Y' [-Wunused-variable]
+     int Y[CONSTANT_M] = {
+         ^
+../src/helloworld.c:273:9: warning: unused variable 'X' [-Wunused-variable]
+     int X[CONSTANT_M][CONSTANT_N] = {
+         ^
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+20:29:20 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:303:58: error: 'iter' undeclared (first use in this function)
+  xil_printf("\n\nAlgorithm converged in %d iterations.", iter);
+                                                          ^~~~
+../src/helloworld.c:303:58: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:295:9: warning: unused variable 'alpha' [-Wunused-variable]
+     int alpha = 0.01*SCALING_FACTOR;
+         ^~~~~
+../src/helloworld.c:281:9: warning: unused variable 'Y' [-Wunused-variable]
+     int Y[CONSTANT_M] = {
+         ^
+../src/helloworld.c:272:9: warning: unused variable 'X' [-Wunused-variable]
+     int X[CONSTANT_M][CONSTANT_N] = {
+         ^
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+20:29:40 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:298:21: warning: passing argument 1 of 'linreg_hardware' from incompatible pointer type [-Wincompatible-pointer-types]
+     linreg_hardware(X, Y, T, alpha, CONSTANT_M, CONSTANT_N);
+                     ^
+../src/helloworld.c:213:6: note: expected 'int **' but argument is of type 'int (*)[2]'
+ void linreg_hardware(int **X, int Y[], int T[], int alpha, int m, int n)
+      ^~~~~~~~~~~~~~~
+../src/helloworld.c:303:58: error: 'iter' undeclared (first use in this function)
+  xil_printf("\n\nAlgorithm converged in %d iterations.", iter);
+                                                          ^~~~
+../src/helloworld.c:303:58: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+20:29:58 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:299:21: warning: passing argument 1 of 'linreg_hardware' from incompatible pointer type [-Wincompatible-pointer-types]
+     linreg_hardware(X, Y, T, alpha, CONSTANT_M, CONSTANT_N);
+                     ^
+../src/helloworld.c:213:6: note: expected 'int **' but argument is of type 'int (*)[2]'
+ void linreg_hardware(int **X, int Y[], int T[], int alpha, int m, int n)
+      ^~~~~~~~~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11632	    312	   3112	  15056	   3ad0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:30:14 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:31:01 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:299:21: warning: passing argument 1 of 'linreg_hardware' from incompatible pointer type [-Wincompatible-pointer-types]
+     linreg_hardware(X, Y, T, alpha, CONSTANT_M, CONSTANT_N);
+                     ^
+../src/helloworld.c:213:6: note: expected 'int **' but argument is of type 'int (*)[2]'
+ void linreg_hardware(int **X, int Y[], int T[], int alpha, int m, int n)
+      ^~~~~~~~~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11632	    312	   3112	  15056	   3ad0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:33:15 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:213:26: error: array type has incomplete element type 'int[]'
+ void linreg_hardware(int X[][], int Y[], int T[], int alpha, int m, int n)
+                          ^
+../src/helloworld.c:213:26: note: declaration of 'X' as multidimensional array must have bounds for all dimensions except the first
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:299:21: error: type of formal parameter 1 is incomplete
+     linreg_hardware(X, Y, T, alpha, CONSTANT_M, CONSTANT_N);
+                     ^
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+20:33:23 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11632	    312	   3112	  15056	   3ad0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:33:36 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:33:43 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:34:04 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/linreg.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/linreg.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/linreg.d" -MT"src/linreg.o" -o "src/linreg.o" "../src/linreg.c"
+Finished building: ../src/linreg.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11392	    312	   3112	  14816	   39e0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:34:28 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11456	    312	   3112	  14880	   3a20	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:34:46 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11456	    312	   3112	  14880	   3a20	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:34:55 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11456	    312	   3112	  14880	   3a20	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:35:52 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11456	    312	   3112	  14880	   3a20	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:36:14 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20692	    312	   3140	  24144	   5e50	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:36:16 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20692	    312	   3140	  24144	   5e50	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:36:19 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20692	    312	   3140	  24144	   5e50	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:36:29 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:37:13 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20844	    312	   3140	  24296	   5ee8	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:37:20 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:39:06 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20844	    312	   3140	  24296	   5ee8	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:39:58 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20804	    312	   3140	  24256	   5ec0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:40:01 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:40:21 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  18744	    312	   3136	  22192	   56b0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:40:24 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:41:09 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  18744	    312	   3136	  22192	   56b0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:41:22 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22628	    312	   3140	  26080	   65e0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:41:48 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23024	    312	   3136	  26472	   6768	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:42:22 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24512	    312	   3136	  27960	   6d38	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:42:25 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24512	    312	   3136	  27960	   6d38	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:42:38 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24024	    312	   3136	  27472	   6b50	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:43:01 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25560	    312	   3136	  29008	   7150	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:43:23 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25452	    312	   3140	  28904	   70e8	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:43:30 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25452	    312	   3140	  28904	   70e8	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:43:36 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:43:48 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:45:09 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25684	    312	   3140	  29136	   71d0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:45:37 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25684	    312	   3140	  29136	   71d0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:45:42 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25740	    312	   3140	  29192	   7208	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:45:45 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:46:33 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25744	    312	   3136	  29192	   7208	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:47:02 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25744	    312	   3136	  29192	   7208	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:47:09 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:48:24 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25744	    312	   3136	  29192	   7208	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:48:48 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/linreg.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/linreg.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/linreg.d" -MT"src/linreg.o" -o "src/linreg.o" "../src/linreg.c"
+Finished building: ../src/linreg.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25984	    312	   3136	  29432	   72f8	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:48:55 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:50:30 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:277:24: error: 'n' undeclared (first use in this function)
+     for(int i = 0; i < n; i++) xil_printf("\ntheta[%d] = %d", i, T[i]);
+                        ^
+../src/helloworld.c:277:24: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+20:50:34 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:277:24: error: 'n' undeclared (first use in this function)
+     for(int i = 0; i < n; i++) xil_printf("\ntheta[%d] = %d", i, T[i]);
+                        ^
+../src/helloworld.c:277:24: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+20:50:43 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26092	    312	   3140	  29544	   7368	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:50:47 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:51:26 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26092	    312	   3140	  29544	   7368	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:51:47 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26060	    312	   3140	  29512	   7348	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:53:12 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:277:27: error: 'T' undeclared (first use in this function)
+     linreg_software(X, Y, T, alpha, CONSTANT_M, CONSTANT_N);
+                           ^
+../src/helloworld.c:277:27: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+20:53:38 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:289:6: error: redefinition of 'T'
+  int T[CONSTANT_N] = {
+      ^
+../src/helloworld.c:270:9: note: previous definition of 'T' was here
+     int T[CONSTANT_N] = {
+         ^
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+20:53:49 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:289:2: error: 'T2' undeclared (first use in this function)
+  T2[CONSTANT_N] = {
+  ^~
+../src/helloworld.c:289:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:289:19: error: expected expression before '{' token
+  T2[CONSTANT_N] = {
+                   ^
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+20:53:54 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:289:18: error: expected expression before '{' token
+  T[CONSTANT_N] = {
+                  ^
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+20:54:04 **** Clean-only build of configuration Debug for project microblaze ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o  ./src/helloworld.d ./src/instructions.d ./src/linreg.d ./src/platform.d  microblaze.elf.size  microblaze.elf
+ 
+20:54:04 **** Clean-only build of project microblaze_bsp ****
+make -k clean 
+make -C microblaze_0/libsrc/cpu_v2_6/src -s clean 
+make -C microblaze_0/libsrc/standalone_v6_5/src -s clean 
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s clean 
+make -C microblaze_0/libsrc/bram_v4_2/src -s clean 
+make -C microblaze_0/libsrc/intc_v3_7/src -s clean 
+rm -f microblaze_0/lib/libxil.a
+20:54:04 **** Build of project microblaze_bsp ****
+make -k all 
+Running Make include in microblaze_0/libsrc/standalone_v6_5/src
+Running Make include in microblaze_0/libsrc/uartlite_v3_2/src
+make -C microblaze_0/libsrc/standalone_v6_5/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/cpu_v2_6/src
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+make -C microblaze_0/libsrc/cpu_v2_6/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/bram_v4_2/src
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make include in microblaze_0/libsrc/intc_v3_7/src
+make -C microblaze_0/libsrc/intc_v3_7/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make libs in microblaze_0/libsrc/standalone_v6_5/src
+make -C microblaze_0/libsrc/standalone_v6_5/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make libs in microblaze_0/libsrc/cpu_v2_6/src
+make -C microblaze_0/libsrc/cpu_v2_6/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Running Make libs in microblaze_0/libsrc/bram_v4_2/src
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling standalone
+Compiling uartlite
+Compiling cpu
+Compiling bram
+mb-ar: creating ../../../lib/libxil.a
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Running Make libs in microblaze_0/libsrc/intc_v3_7/src
+make -C microblaze_0/libsrc/intc_v3_7/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+Compiling intc
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+make[2]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Finished building libraries
+20:54:06 **** Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Building file: ../src/instructions.c
+Building file: ../src/platform.c
+Building file: ../src/linreg.c
+Invoking: MicroBlaze gcc compiler
+Invoking: MicroBlaze gcc compiler
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/instructions.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/instructions.d" -MT"src/instructions.o" -o "src/instructions.o" "../src/instructions.c"
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/linreg.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/linreg.d" -MT"src/linreg.o" -o "src/linreg.o" "../src/linreg.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:289:18: error: expected expression before '{' token
+  T[CONSTANT_N] = {
+                  ^
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+make: *** Waiting for unfinished jobs....
+Finished building: ../src/platform.c
+ 
+Finished building: ../src/instructions.c
+ 
+Finished building: ../src/linreg.c
+ 
+20:54:28 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25976	    312	   3136	  29424	   72f0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:54:33 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:54:52 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:55:03 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/linreg.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/linreg.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/linreg.d" -MT"src/linreg.o" -o "src/linreg.o" "../src/linreg.c"
+Finished building: ../src/linreg.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25736	    312	   3136	  29184	   7200	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:56:19 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'toc':
+../src/helloworld.c:67:123: error: invalid operands to binary / (have 'char *' and 'int')
+  xil_printf("\nElapsed time is estimated to be %s ns = %d s = %d timer events", print_long_long(res), print_long_long(res)/1000000000, irqCount);
+                                                                                                       ~~~~~~~~~~~~~~~~~~~~^
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+20:56:30 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25804	    312	   3140	  29256	   7248	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:56:38 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:56:44 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+20:57:38 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25800	    312	   3136	  29248	   7240	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:57:42 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25736	    312	   3136	  29184	   7200	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:58:47 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'linreg_software':
+../src/helloworld.c:186:9: error: 'l' undeclared (first use in this function)
+    Told[l] = T[l];
+         ^
+../src/helloworld.c:186:9: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+20:58:53 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26952	    312	   3136	  30400	   76c0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:59:21 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'linreg_software':
+../src/helloworld.c:149:21: error: 'CONSTANT_GRADIENT_DESCENT_ITERATIONS' undeclared (first use in this function)
+  for(int i = 0; i < CONSTANT_GRADIENT_DESCENT_ITERATIONS; i++) {
+                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:149:21: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+20:59:34 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:23:2: error: invalid preprocessing directive #CONSTANT_GRADIENT_DESCENT_ITERATIONS
+ #CONSTANT_GRADIENT_DESCENT_ITERATIONS 1000
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c: In function 'linreg_software':
+../src/helloworld.c:150:21: error: 'CONSTANT_GRADIENT_DESCENT_ITERATIONS' undeclared (first use in this function)
+  for(int i = 0; i < CONSTANT_GRADIENT_DESCENT_ITERATIONS; i++) {
+                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:150:21: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+20:59:37 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26952	    312	   3136	  30400	   76c0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:59:48 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26952	    312	   3136	  30400	   76c0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+20:59:53 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+21:00:09 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+21:01:54 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'linreg_software':
+../src/helloworld.c:190:20: error: 'Tnew' undeclared (first use in this function)
+   if(has_converged(Tnew, Told, n, CONSTANT_THRESHOLD)) break;
+                    ^~~~
+../src/helloworld.c:190:20: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:32: src/helloworld.o] Error 1
+21:02:06 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26380	    312	   3140	  29832	   7488	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+21:02:25 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+21:02:48 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+21:02:57 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+21:04:20 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26492	    312	   3140	  29944	   74f8	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+21:04:23 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26436	    312	   3140	  29888	   74c0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+21:04:45 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26500	    312	   3140	  29952	   7500	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+21:05:48 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26524	    312	   3140	  29976	   7518	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+21:06:20 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26524	    312	   3140	  29976	   7518	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+21:06:25 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26524	    312	   3140	  29976	   7518	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+21:06:33 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26524	    312	   3140	  29976	   7518	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+21:06:36 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+21:06:43 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+21:07:57 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26524	    312	   3140	  29976	   7518	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+21:08:03 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26524	    312	   3140	  29976	   7518	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+21:09:18 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/instructions.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/instructions.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/instructions.d" -MT"src/instructions.o" -o "src/instructions.o" "../src/instructions.c"
+Finished building: ../src/instructions.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25960	    312	   3136	  29408	   72e0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+21:09:30 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+21:11:12 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25960	    312	   3136	  29408	   72e0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+21:11:48 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+21:12:00 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+21:13:09 **** Auto Build of configuration Debug for project microblaze ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../microblaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: microblaze.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../microblaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "microblaze.elf"  ./src/helloworld.o ./src/instructions.o ./src/linreg.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: microblaze.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size microblaze.elf  |tee "microblaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25908	    312	   3140	  29360	   72b0	microblaze.elf
+Finished building: microblaze.elf.size
+ 
+21:13:15 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.
+21:13:32 **** Incremental Build of configuration Debug for project microblaze ****
+make all 
+make: Nothing to be done for 'all'.

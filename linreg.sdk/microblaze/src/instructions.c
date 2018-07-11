@@ -13,7 +13,7 @@ unsigned int reset()
 	unsigned int inst = 0; // don't care
 	inst = ((OPCODE_RESET << 29) | inst);
 
-	xil_printf("\nInstruction 0x%08x: reset coprocessor registers and state", inst);
+	//xil_printf("\nInstruction 0x%08x: reset coprocessor registers and state", inst);
 	putfsl(inst, 0);
 
 	return inst;
@@ -27,7 +27,7 @@ unsigned int store_x(int x, unsigned int i, unsigned int j)
 	inst = (OPCODE_STORE_X << 29) | inst;
 
 	putfsl(inst, 0);
-	xil_printf("\nInstruction 0x%08x: stored X[%d][%d] = 0x%08x = %d", inst, i, j, x, x);
+	//xil_printf("\nInstruction 0x%08x: stored X[%d][%d] = 0x%08x = %d", inst, i, j, x, x);
 
 	return inst;
 }
@@ -39,7 +39,7 @@ unsigned int store_y(int y, unsigned int i)
 	inst = (OPCODE_STORE_Y << 29) | inst;
 
 	putfsl(inst, 0);
-	xil_printf("\nInstruction 0x%08x: stored Y[%d] = 0x%08x = %d", inst, i, y, y);
+	//xil_printf("\nInstruction 0x%08x: stored Y[%d] = 0x%08x = %d", inst, i, y, y);
 
 	return inst;
 }
@@ -51,7 +51,7 @@ unsigned int store_t(int t, unsigned int i)
 	inst = (OPCODE_STORE_T << 29) | inst;
 
 	putfsl(inst, 0);
-	xil_printf("\nInstruction 0x%08x: stored T[%d] = 0x%08x = %d", inst, i, t, t);
+	//xil_printf("\nInstruction 0x%08x: stored T[%d] = 0x%08x = %d", inst, i, t, t);
 
 	return inst;
 }
@@ -61,7 +61,7 @@ unsigned int store_a(int a)
 	unsigned int inst = (a & 0x03ffffff);
 	inst = (OPCODE_STORE_A << 29) | inst;
 
-	xil_printf("\nInstruction 0x%08x: stored alpha = 0x%08x = %d", inst, a, a);
+	//xil_printf("\nInstruction 0x%08x: stored alpha = 0x%08x = %d", inst, a, a);
 	putfsl(inst, 0);
 
 	return inst;
@@ -73,7 +73,7 @@ unsigned int compute(unsigned int iter)
 	inst = (OPCODE_COMPUTE << 29) | inst;
 
 	putfsl(inst, 0);
-	xil_printf("\nInstruction 0x%08x: issued iteration %d of gradient descent", inst, iter);
+	//xil_printf("\nInstruction 0x%08x: issued iteration %d of gradient descent", inst, iter);
 
 	return inst;
 }
