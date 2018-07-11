@@ -285,7 +285,7 @@ proc create_root_design { parentCell } {
   # Create instance: gradientdescent_0, and set properties
   set gradientdescent_0 [ create_bd_cell -type ip -vlnv user.org:user:gradientdescent:1.0 gradientdescent_0 ]
   set_property -dict [ list \
-   CONFIG.m {10} \
+   CONFIG.m {6} \
    CONFIG.n {2} \
  ] $gradientdescent_0
 

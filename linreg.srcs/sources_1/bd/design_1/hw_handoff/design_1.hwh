@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jul 10 18:12:44 2018" VIVADOVERSION="2017.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jul 10 23:29:20 2018" VIVADOVERSION="2017.4">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys4:part0:1.1" DEVICE="7a100t" NAME="design_1" PACKAGE="csg324" SPEEDGRADE="-1"/>
 
@@ -2761,7 +2761,7 @@
         <PARAMETER NAME="C_S00_AXIS_TDATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_M00_AXIS_TDATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_M00_AXIS_START_COUNT" VALUE="32"/>
-        <PARAMETER NAME="m" VALUE="10"/>
+        <PARAMETER NAME="m" VALUE="6"/>
         <PARAMETER NAME="n" VALUE="2"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_gradientdescent_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>

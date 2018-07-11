@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Tue Jul 10 18:14:19 2018
-# Process ID: 28646
+# Start of session at: Tue Jul 10 23:30:46 2018
+# Process ID: 3400
 # Current directory: /home/fabio/Desktop/linreg/linreg.runs/synth_1
 # Command line: vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: /home/fabio/Desktop/linreg/linreg.runs/synth_1/design_1_wrapper.vds
@@ -19,15 +19,15 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 28691 
+INFO: Helper process launched with PID 3481 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1281.891 ; gain = 83.988 ; free physical = 1915 ; free virtual = 8856
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1280.887 ; gain = 82.988 ; free physical = 2015 ; free virtual = 8491
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:23]
 INFO: [Synth 8-3491] module 'design_1' declared at '/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:1366' bound to instance 'design_1_i' of component 'design_1' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:33]
 INFO: [Synth 8-638] synthesizing module 'design_1' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:1379]
-INFO: [Synth 8-3491] module 'design_1_axi_intc_0_0' declared at '/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/realtime/design_1_axi_intc_0_0_stub.vhdl:5' bound to instance 'axi_intc_0' of component 'design_1_axi_intc_0_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:1677]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_intc_0_0' [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/realtime/design_1_axi_intc_0_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'design_1_axi_intc_0_0' declared at '/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/realtime/design_1_axi_intc_0_0_stub.vhdl:5' bound to instance 'axi_intc_0' of component 'design_1_axi_intc_0_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:1677]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_intc_0_0' [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/realtime/design_1_axi_intc_0_0_stub.vhdl:32]
 INFO: [Synth 8-638] synthesizing module 'design_1_axi_interconnect_0_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:951]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_1CA5Z32' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:57]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_1CA5Z32' (1#1) [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:57]
@@ -35,35 +35,35 @@ INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_I4GRPB' [/home/fabio/D
 INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_I4GRPB' (2#1) [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:158]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_O7FAN0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:821]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_O7FAN0' (3#1) [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:821]
-INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at '/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:1301]
-INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/realtime/design_1_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at '/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:1301]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/realtime/design_1_xbar_0_stub.vhdl:51]
 INFO: [Synth 8-256] done synthesizing module 'design_1_axi_interconnect_0_0' (4#1) [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:951]
-INFO: [Synth 8-3491] module 'design_1_axi_uartlite_0_0' declared at '/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/realtime/design_1_axi_uartlite_0_0_stub.vhdl:5' bound to instance 'axi_uartlite_0' of component 'design_1_axi_uartlite_0_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:1765]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_uartlite_0_0' [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/realtime/design_1_axi_uartlite_0_0_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'design_1_clk_wiz_1_0' declared at '/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/realtime/design_1_clk_wiz_1_0_stub.vhdl:5' bound to instance 'clk_wiz_1' of component 'design_1_clk_wiz_1_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:1790]
-INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_1_0' [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/realtime/design_1_clk_wiz_1_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'design_1_gradientdescent_0_0' declared at '/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/realtime/design_1_gradientdescent_0_0_stub.vhdl:5' bound to instance 'gradientdescent_0' of component 'design_1_gradientdescent_0_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:1797]
-INFO: [Synth 8-638] synthesizing module 'design_1_gradientdescent_0_0' [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/realtime/design_1_gradientdescent_0_0_stub.vhdl:25]
-INFO: [Synth 8-3491] module 'design_1_mdm_1_0' declared at '/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/realtime/design_1_mdm_1_0_stub.vhdl:5' bound to instance 'mdm_1' of component 'design_1_mdm_1_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:1814]
-INFO: [Synth 8-638] synthesizing module 'design_1_mdm_1_0' [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/realtime/design_1_mdm_1_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_microblaze_0_0' declared at '/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/realtime/design_1_microblaze_0_0_stub.vhdl:5' bound to instance 'microblaze_0' of component 'design_1_microblaze_0_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:1827]
-INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_0' [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/realtime/design_1_microblaze_0_0_stub.vhdl:71]
+INFO: [Synth 8-3491] module 'design_1_axi_uartlite_0_0' declared at '/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/realtime/design_1_axi_uartlite_0_0_stub.vhdl:5' bound to instance 'axi_uartlite_0' of component 'design_1_axi_uartlite_0_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:1765]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_uartlite_0_0' [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/realtime/design_1_axi_uartlite_0_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'design_1_clk_wiz_1_0' declared at '/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/realtime/design_1_clk_wiz_1_0_stub.vhdl:5' bound to instance 'clk_wiz_1' of component 'design_1_clk_wiz_1_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:1790]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_1_0' [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/realtime/design_1_clk_wiz_1_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'design_1_gradientdescent_0_0' declared at '/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/realtime/design_1_gradientdescent_0_0_stub.vhdl:5' bound to instance 'gradientdescent_0' of component 'design_1_gradientdescent_0_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:1797]
+INFO: [Synth 8-638] synthesizing module 'design_1_gradientdescent_0_0' [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/realtime/design_1_gradientdescent_0_0_stub.vhdl:25]
+INFO: [Synth 8-3491] module 'design_1_mdm_1_0' declared at '/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/realtime/design_1_mdm_1_0_stub.vhdl:5' bound to instance 'mdm_1' of component 'design_1_mdm_1_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:1814]
+INFO: [Synth 8-638] synthesizing module 'design_1_mdm_1_0' [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/realtime/design_1_mdm_1_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_microblaze_0_0' declared at '/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/realtime/design_1_microblaze_0_0_stub.vhdl:5' bound to instance 'microblaze_0' of component 'design_1_microblaze_0_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:1827]
+INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_0' [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/realtime/design_1_microblaze_0_0_stub.vhdl:71]
 INFO: [Synth 8-638] synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:242]
-INFO: [Synth 8-3491] module 'design_1_dlmb_bram_if_cntlr_0' declared at '/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/realtime/design_1_dlmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'dlmb_bram_if_cntlr' of component 'design_1_dlmb_bram_if_cntlr_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:456]
-INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_bram_if_cntlr_0' [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/realtime/design_1_dlmb_bram_if_cntlr_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'design_1_dlmb_v10_0' declared at '/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/realtime/design_1_dlmb_v10_0_stub.vhdl:5' bound to instance 'dlmb_v10' of component 'design_1_dlmb_v10_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:510]
-INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_v10_0' [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/realtime/design_1_dlmb_v10_0_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'design_1_ilmb_bram_if_cntlr_0' declared at '/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/realtime/design_1_ilmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'ilmb_bram_if_cntlr' of component 'design_1_ilmb_bram_if_cntlr_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:538]
-INFO: [Synth 8-638] synthesizing module 'design_1_ilmb_bram_if_cntlr_0' [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/realtime/design_1_ilmb_bram_if_cntlr_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'design_1_ilmb_v10_0' declared at '/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/realtime/design_1_ilmb_v10_0_stub.vhdl:5' bound to instance 'ilmb_v10' of component 'design_1_ilmb_v10_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:592]
-INFO: [Synth 8-638] synthesizing module 'design_1_ilmb_v10_0' [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/realtime/design_1_ilmb_v10_0_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'design_1_lmb_bram_0' declared at '/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/realtime/design_1_lmb_bram_0_stub.vhdl:5' bound to instance 'lmb_bram' of component 'design_1_lmb_bram_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:620]
-INFO: [Synth 8-638] synthesizing module 'design_1_lmb_bram_0' [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/realtime/design_1_lmb_bram_0_stub.vhdl:27]
+INFO: [Synth 8-3491] module 'design_1_dlmb_bram_if_cntlr_0' declared at '/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/realtime/design_1_dlmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'dlmb_bram_if_cntlr' of component 'design_1_dlmb_bram_if_cntlr_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:456]
+INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_bram_if_cntlr_0' [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/realtime/design_1_dlmb_bram_if_cntlr_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_dlmb_v10_0' declared at '/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/realtime/design_1_dlmb_v10_0_stub.vhdl:5' bound to instance 'dlmb_v10' of component 'design_1_dlmb_v10_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:510]
+INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_v10_0' [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/realtime/design_1_dlmb_v10_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'design_1_ilmb_bram_if_cntlr_0' declared at '/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/realtime/design_1_ilmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'ilmb_bram_if_cntlr' of component 'design_1_ilmb_bram_if_cntlr_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:538]
+INFO: [Synth 8-638] synthesizing module 'design_1_ilmb_bram_if_cntlr_0' [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/realtime/design_1_ilmb_bram_if_cntlr_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_ilmb_v10_0' declared at '/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/realtime/design_1_ilmb_v10_0_stub.vhdl:5' bound to instance 'ilmb_v10' of component 'design_1_ilmb_v10_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:592]
+INFO: [Synth 8-638] synthesizing module 'design_1_ilmb_v10_0' [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/realtime/design_1_ilmb_v10_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'design_1_lmb_bram_0' declared at '/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/realtime/design_1_lmb_bram_0_stub.vhdl:5' bound to instance 'lmb_bram' of component 'design_1_lmb_bram_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:620]
+INFO: [Synth 8-638] synthesizing module 'design_1_lmb_bram_0' [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/realtime/design_1_lmb_bram_0_stub.vhdl:27]
 INFO: [Synth 8-256] done synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' (5#1) [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:242]
-INFO: [Synth 8-3491] module 'design_1_rst_clk_wiz_1_100M_0' declared at '/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/realtime/design_1_rst_clk_wiz_1_100M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_1_100M' of component 'design_1_rst_clk_wiz_1_100M_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:1914]
-INFO: [Synth 8-638] synthesizing module 'design_1_rst_clk_wiz_1_100M_0' [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/realtime/design_1_rst_clk_wiz_1_100M_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_xlconstant_0_0' declared at '/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/realtime/design_1_xlconstant_0_0_stub.vhdl:5' bound to instance 'xlconstant_0' of component 'design_1_xlconstant_0_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:1927]
-INFO: [Synth 8-638] synthesizing module 'design_1_xlconstant_0_0' [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/realtime/design_1_xlconstant_0_0_stub.vhdl:12]
+INFO: [Synth 8-3491] module 'design_1_rst_clk_wiz_1_100M_0' declared at '/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/realtime/design_1_rst_clk_wiz_1_100M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_1_100M' of component 'design_1_rst_clk_wiz_1_100M_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:1914]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_clk_wiz_1_100M_0' [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/realtime/design_1_rst_clk_wiz_1_100M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_xlconstant_0_0' declared at '/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/realtime/design_1_xlconstant_0_0_stub.vhdl:5' bound to instance 'xlconstant_0' of component 'design_1_xlconstant_0_0' [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:1927]
+INFO: [Synth 8-638] synthesizing module 'design_1_xlconstant_0_0' [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/realtime/design_1_xlconstant_0_0_stub.vhdl:12]
 INFO: [Synth 8-256] done synthesizing module 'design_1' (6#1) [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/synth/design_1.vhd:1379]
 INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (7#1) [/home/fabio/Desktop/linreg/linreg.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:23]
 WARNING: [Synth 8-3331] design s00_couplers_imp_O7FAN0 has unconnected port M_ACLK
@@ -79,7 +79,7 @@ WARNING: [Synth 8-3331] design m00_couplers_imp_1CA5Z32 has unconnected port M_A
 WARNING: [Synth 8-3331] design m00_couplers_imp_1CA5Z32 has unconnected port S_ACLK
 WARNING: [Synth 8-3331] design m00_couplers_imp_1CA5Z32 has unconnected port S_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1324.422 ; gain = 126.520 ; free physical = 1926 ; free virtual = 8867
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1324.418 ; gain = 126.520 ; free physical = 2026 ; free virtual = 8502
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -89,41 +89,41 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1324.422 ; gain = 126.520 ; free physical = 1926 ; free virtual = 8868
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1324.418 ; gain = 126.520 ; free physical = 2027 ; free virtual = 8503
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp14/design_1_microblaze_0_0_in_context.xdc] for cell 'design_1_i/microblaze_0'
-Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp14/design_1_microblaze_0_0_in_context.xdc] for cell 'design_1_i/microblaze_0'
-Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp15/design_1_mdm_1_0_in_context.xdc] for cell 'design_1_i/mdm_1'
-Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp15/design_1_mdm_1_0_in_context.xdc] for cell 'design_1_i/mdm_1'
-Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp16/design_1_clk_wiz_1_0_in_context.xdc] for cell 'design_1_i/clk_wiz_1'
-Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp16/design_1_clk_wiz_1_0_in_context.xdc] for cell 'design_1_i/clk_wiz_1'
-Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp17/design_1_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M'
-Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp17/design_1_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M'
-Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp18/design_1_xlconstant_0_0_in_context.xdc] for cell 'design_1_i/xlconstant_0'
-Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp18/design_1_xlconstant_0_0_in_context.xdc] for cell 'design_1_i/xlconstant_0'
-Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp19/design_1_axi_intc_0_0_in_context.xdc] for cell 'design_1_i/axi_intc_0'
-Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp19/design_1_axi_intc_0_0_in_context.xdc] for cell 'design_1_i/axi_intc_0'
-Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp20/design_1_axi_uartlite_0_0_in_context.xdc] for cell 'design_1_i/axi_uartlite_0'
-Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp20/design_1_axi_uartlite_0_0_in_context.xdc] for cell 'design_1_i/axi_uartlite_0'
-Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp21/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/xbar'
-Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp21/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/xbar'
-Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp22/design_1_ilmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10'
-Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp22/design_1_ilmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10'
-Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp23/design_1_ilmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10'
-Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp23/design_1_ilmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10'
-Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp24/design_1_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
-Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp24/design_1_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
-Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp25/design_1_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
-Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp25/design_1_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
-Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp26/design_1_lmb_bram_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/lmb_bram'
-Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp26/design_1_lmb_bram_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/lmb_bram'
-Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp27/design_1_gradientdescent_0_0_in_context.xdc] for cell 'design_1_i/gradientdescent_0'
-Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp27/design_1_gradientdescent_0_0_in_context.xdc] for cell 'design_1_i/gradientdescent_0'
+Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp14/design_1_microblaze_0_0_in_context.xdc] for cell 'design_1_i/microblaze_0'
+Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp14/design_1_microblaze_0_0_in_context.xdc] for cell 'design_1_i/microblaze_0'
+Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp15/design_1_mdm_1_0_in_context.xdc] for cell 'design_1_i/mdm_1'
+Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp15/design_1_mdm_1_0_in_context.xdc] for cell 'design_1_i/mdm_1'
+Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp16/design_1_clk_wiz_1_0_in_context.xdc] for cell 'design_1_i/clk_wiz_1'
+Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp16/design_1_clk_wiz_1_0_in_context.xdc] for cell 'design_1_i/clk_wiz_1'
+Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp17/design_1_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M'
+Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp17/design_1_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M'
+Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp18/design_1_xlconstant_0_0_in_context.xdc] for cell 'design_1_i/xlconstant_0'
+Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp18/design_1_xlconstant_0_0_in_context.xdc] for cell 'design_1_i/xlconstant_0'
+Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp19/design_1_axi_intc_0_0_in_context.xdc] for cell 'design_1_i/axi_intc_0'
+Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp19/design_1_axi_intc_0_0_in_context.xdc] for cell 'design_1_i/axi_intc_0'
+Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp20/design_1_axi_uartlite_0_0_in_context.xdc] for cell 'design_1_i/axi_uartlite_0'
+Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp20/design_1_axi_uartlite_0_0_in_context.xdc] for cell 'design_1_i/axi_uartlite_0'
+Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp21/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/xbar'
+Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp21/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/xbar'
+Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp22/design_1_ilmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10'
+Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp22/design_1_ilmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10'
+Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp23/design_1_ilmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10'
+Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp23/design_1_ilmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10'
+Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp24/design_1_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp24/design_1_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp25/design_1_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp25/design_1_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp26/design_1_lmb_bram_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/lmb_bram'
+Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp26/design_1_lmb_bram_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/lmb_bram'
+Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp27/design_1_gradientdescent_0_0_in_context.xdc] for cell 'design_1_i/gradientdescent_0'
+Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp27/design_1_gradientdescent_0_0_in_context.xdc] for cell 'design_1_i/gradientdescent_0'
 Parsing XDC File [/home/fabio/Desktop/linreg/linreg.srcs/constrs_1/imports/Downloads/Nexys4_Master.xdc]
 Finished Parsing XDC File [/home/fabio/Desktop/linreg/linreg.srcs/constrs_1/imports/Downloads/Nexys4_Master.xdc]
 Parsing XDC File [/home/fabio/Desktop/linreg/linreg.runs/synth_1/dont_touch.xdc]
@@ -133,22 +133,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1639.250 ; gain = 0.000 ; free physical = 1667 ; free virtual = 8603
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1639.238 ; gain = 0.000 ; free physical = 1733 ; free virtual = 8209
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 1639.250 ; gain = 441.348 ; free physical = 1742 ; free virtual = 8682
+Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:41 . Memory (MB): peak = 1639.238 ; gain = 441.340 ; free physical = 1810 ; free virtual = 8286
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 1639.250 ; gain = 441.348 ; free physical = 1742 ; free virtual = 8682
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:41 . Memory (MB): peak = 1639.238 ; gain = 441.340 ; free physical = 1810 ; free virtual = 8286
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for sys_clock. (constraint file  /home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp16/design_1_clk_wiz_1_0_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clock. (constraint file  /home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-28646-faviouz/dcp16/design_1_clk_wiz_1_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clock. (constraint file  /home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp16/design_1_clk_wiz_1_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clock. (constraint file  /home/fabio/Desktop/linreg/linreg.runs/synth_1/.Xil/Vivado-3400-faviouz/dcp16/design_1_clk_wiz_1_0_in_context.xdc, line 4).
 Applied set_property DONT_TOUCH = true for design_1_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/axi_intc_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/axi_interconnect_0. (constraint file  auto generated constraint, line ).
@@ -166,10 +166,10 @@ Applied set_property DONT_TOUCH = true for design_1_i/microblaze_0_local_memory/
 Applied set_property DONT_TOUCH = true for design_1_i/rst_clk_wiz_1_100M. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/xlconstant_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:41 . Memory (MB): peak = 1639.250 ; gain = 441.348 ; free physical = 1744 ; free virtual = 8684
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:41 . Memory (MB): peak = 1639.238 ; gain = 441.340 ; free physical = 1812 ; free virtual = 8288
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:41 . Memory (MB): peak = 1639.250 ; gain = 441.348 ; free physical = 1744 ; free virtual = 8684
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:41 . Memory (MB): peak = 1639.238 ; gain = 441.340 ; free physical = 1812 ; free virtual = 8288
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -210,7 +210,7 @@ WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected por
 WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port S00_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:41 . Memory (MB): peak = 1639.250 ; gain = 441.348 ; free physical = 1743 ; free virtual = 8683
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 1639.238 ; gain = 441.340 ; free physical = 1812 ; free virtual = 8288
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -228,13 +228,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/microblaze_0_l
 INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr/BRAM_Clk_A' to pin 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr/bbstub_BRAM_Clk_A/O'
 INFO: [Synth 8-5819] Moved 5 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:50 . Memory (MB): peak = 1639.250 ; gain = 441.348 ; free physical = 1619 ; free virtual = 8559
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:51 . Memory (MB): peak = 1639.238 ; gain = 441.340 ; free physical = 1696 ; free virtual = 8172
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:50 . Memory (MB): peak = 1639.250 ; gain = 441.348 ; free physical = 1619 ; free virtual = 8559
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:51 . Memory (MB): peak = 1639.238 ; gain = 441.340 ; free physical = 1696 ; free virtual = 8172
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -246,7 +246,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:51 . Memory (MB): peak = 1639.250 ; gain = 441.348 ; free physical = 1619 ; free virtual = 8559
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:51 . Memory (MB): peak = 1639.238 ; gain = 441.340 ; free physical = 1696 ; free virtual = 8172
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -270,7 +270,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:51 . Memory (MB): peak = 1639.250 ; gain = 441.348 ; free physical = 1619 ; free virtual = 8559
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:51 . Memory (MB): peak = 1639.238 ; gain = 441.340 ; free physical = 1696 ; free virtual = 8172
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -283,7 +283,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:51 . Memory (MB): peak = 1639.250 ; gain = 441.348 ; free physical = 1619 ; free virtual = 8559
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:51 . Memory (MB): peak = 1639.238 ; gain = 441.340 ; free physical = 1696 ; free virtual = 8172
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -295,25 +295,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:51 . Memory (MB): peak = 1639.250 ; gain = 441.348 ; free physical = 1619 ; free virtual = 8559
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:51 . Memory (MB): peak = 1639.238 ; gain = 441.340 ; free physical = 1696 ; free virtual = 8172
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:51 . Memory (MB): peak = 1639.250 ; gain = 441.348 ; free physical = 1619 ; free virtual = 8559
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:51 . Memory (MB): peak = 1639.238 ; gain = 441.340 ; free physical = 1696 ; free virtual = 8172
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:51 . Memory (MB): peak = 1639.250 ; gain = 441.348 ; free physical = 1619 ; free virtual = 8559
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:51 . Memory (MB): peak = 1639.238 ; gain = 441.340 ; free physical = 1696 ; free virtual = 8172
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:51 . Memory (MB): peak = 1639.250 ; gain = 441.348 ; free physical = 1619 ; free virtual = 8559
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:51 . Memory (MB): peak = 1639.238 ; gain = 441.340 ; free physical = 1696 ; free virtual = 8172
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -371,11 +371,11 @@ Report Instance Areas:
 |4     |    microblaze_0_local_memory |microblaze_0_local_memory_imp_1K0VQXK |   496|
 +------+------------------------------+--------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:51 . Memory (MB): peak = 1639.250 ; gain = 441.348 ; free physical = 1619 ; free virtual = 8559
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:51 . Memory (MB): peak = 1639.238 ; gain = 441.340 ; free physical = 1696 ; free virtual = 8172
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 1639.250 ; gain = 126.520 ; free physical = 1674 ; free virtual = 8614
-Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:51 . Memory (MB): peak = 1639.258 ; gain = 441.348 ; free physical = 1675 ; free virtual = 8615
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 1639.238 ; gain = 126.520 ; free physical = 1751 ; free virtual = 8227
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:51 . Memory (MB): peak = 1639.246 ; gain = 441.340 ; free physical = 1752 ; free virtual = 8228
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -387,8 +387,8 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 64 Infos, 19 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:55 . Memory (MB): peak = 1639.258 ; gain = 466.191 ; free physical = 1659 ; free virtual = 8599
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:55 . Memory (MB): peak = 1639.246 ; gain = 466.184 ; free physical = 1736 ; free virtual = 8213
 INFO: [Common 17-1381] The checkpoint '/home/fabio/Desktop/linreg/linreg.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1639.258 ; gain = 0.000 ; free physical = 1660 ; free virtual = 8599
-INFO: [Common 17-206] Exiting Vivado at Tue Jul 10 18:15:28 2018...
+report_utilization: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1639.246 ; gain = 0.000 ; free physical = 1737 ; free virtual = 8213
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 10 23:31:56 2018...

@@ -1493,3 +1493,1264 @@ con
 18:29:01 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
 18:29:32 INFO  : Disconnected from the channel tcfchan#1.
 18:29:33 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+21:39:33 INFO  : Registering command handlers for SDK TCF services
+21:39:34 INFO  : Launching XSCT server: xsct -n -interactive /home/fabio/Desktop/linreg/linreg.sdk/temp_xsdb_launch_script.tcl
+21:39:36 INFO  : XSCT server has started successfully.
+21:39:36 INFO  : Successfully done setting XSCT server connection channel  
+21:39:36 INFO  : Successfully done setting SDK workspace  
+21:39:36 INFO  : Processing command line option -hwspec /home/fabio/Desktop/linreg/linreg.sdk/design_1_wrapper.hdf.
+21:39:36 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+21:39:37 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1531254985000,  Project:1531243288000
+21:39:37 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_0' is different from /home/fabio/Desktop/linreg/linreg.sdk/design_1_wrapper.hdf.
+21:39:37 INFO  : Copied contents of /home/fabio/Desktop/linreg/linreg.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_0/system.hdf.
+21:39:38 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+21:39:39 INFO  : 
+21:39:41 INFO  : Updating hardware inferred compiler options for microblaze.
+21:39:41 INFO  : Clearing existing target manager status.
+21:39:41 WARN  : Given IPC port value is invalid. Using default port 2350
+21:39:41 WARN  : Given XMD timeout value is invalid. Using default value of 50000
+21:39:44 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+21:39:44 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+21:39:44 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+21:41:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:41:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+21:41:39 INFO  : FPGA configured successfully with bitstream "/home/fabio/Desktop/linreg/linreg.sdk/design_1_wrapper_hw_platform_0/download.bit"
+21:42:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+21:42:09 INFO  : 'fpga -state' command is executed.
+21:42:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:42:09 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+21:42:09 INFO  : 'jtag frequency' command is executed.
+21:42:09 INFO  : Context for processor 'microblaze_0' is selected.
+21:42:09 INFO  : Processor reset is completed for 'microblaze_0'.
+21:42:09 INFO  : Context for processor 'microblaze_0' is selected.
+21:42:09 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+21:42:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+21:42:09 INFO  : Memory regions updated for context MicroBlaze #0
+21:42:09 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+21:42:09 INFO  : Context for processor 'microblaze_0' is selected.
+21:42:10 INFO  : 'con' command is executed.
+21:42:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+21:42:10 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+21:45:30 INFO  : Disconnected from the channel tcfchan#1.
+21:45:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+21:45:45 INFO  : 'fpga -state' command is executed.
+21:45:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:45:45 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+21:45:45 INFO  : 'jtag frequency' command is executed.
+21:45:45 INFO  : Context for processor 'microblaze_0' is selected.
+21:45:45 INFO  : Processor reset is completed for 'microblaze_0'.
+21:45:45 INFO  : Context for processor 'microblaze_0' is selected.
+21:45:45 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+21:45:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+21:45:45 INFO  : Memory regions updated for context MicroBlaze #0
+21:45:45 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+21:45:45 INFO  : Context for processor 'microblaze_0' is selected.
+21:45:45 INFO  : 'con' command is executed.
+21:45:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+21:45:45 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+21:46:13 INFO  : Disconnected from the channel tcfchan#2.
+21:46:14 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+22:19:23 INFO  : Registering command handlers for SDK TCF services
+22:19:24 INFO  : Launching XSCT server: xsct -n -interactive /home/fabio/Desktop/linreg/linreg.sdk/temp_xsdb_launch_script.tcl
+22:19:26 INFO  : XSCT server has started successfully.
+22:19:26 INFO  : Successfully done setting XSCT server connection channel  
+22:19:26 INFO  : Successfully done setting SDK workspace  
+22:19:26 INFO  : Processing command line option -hwspec /home/fabio/Desktop/linreg/linreg.sdk/design_1_wrapper.hdf.
+22:19:26 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+22:19:28 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1531257463000,  Project:1531254985000
+22:19:28 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_0' is different from /home/fabio/Desktop/linreg/linreg.sdk/design_1_wrapper.hdf.
+22:19:28 INFO  : Copied contents of /home/fabio/Desktop/linreg/linreg.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_0/system.hdf.
+22:19:28 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+22:19:29 INFO  : 
+22:19:30 INFO  : Updating hardware inferred compiler options for microblaze.
+22:19:30 INFO  : Clearing existing target manager status.
+22:19:30 WARN  : Given IPC port value is invalid. Using default port 2350
+22:19:30 WARN  : Given XMD timeout value is invalid. Using default value of 50000
+22:19:33 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+22:19:33 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+22:19:34 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+22:20:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:21:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+22:21:45 INFO  : 'fpga -state' command is executed.
+22:21:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:21:45 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+22:21:45 INFO  : 'jtag frequency' command is executed.
+22:21:45 INFO  : Context for processor 'microblaze_0' is selected.
+22:21:46 INFO  : Processor reset is completed for 'microblaze_0'.
+22:21:46 INFO  : Context for processor 'microblaze_0' is selected.
+22:21:46 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+22:21:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+22:21:46 INFO  : Memory regions updated for context MicroBlaze #0
+22:21:46 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+22:21:46 INFO  : Context for processor 'microblaze_0' is selected.
+22:21:46 INFO  : 'con' command is executed.
+22:21:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+22:21:46 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+22:21:59 INFO  : Disconnected from the channel tcfchan#1.
+22:22:04 ERROR : no targets found with "jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0". available targets:
+  1  xc7a100t
+     2  MicroBlaze Debug Module at USER2
+        3* MicroBlaze #0 (Running)
+22:22:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+22:22:08 INFO  : 'fpga -state' command is executed.
+22:22:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:22:08 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+22:22:08 INFO  : 'jtag frequency' command is executed.
+22:22:08 INFO  : Context for processor 'microblaze_0' is selected.
+22:22:08 INFO  : Processor reset is completed for 'microblaze_0'.
+22:22:08 INFO  : Context for processor 'microblaze_0' is selected.
+22:22:09 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+22:22:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+22:22:09 INFO  : Memory regions updated for context MicroBlaze #0
+22:22:09 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+22:22:09 INFO  : Context for processor 'microblaze_0' is selected.
+22:22:09 INFO  : 'con' command is executed.
+22:22:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+22:22:09 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+22:25:03 INFO  : Disconnected from the channel tcfchan#2.
+22:25:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+22:25:04 INFO  : 'fpga -state' command is executed.
+22:25:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:25:04 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+22:25:04 INFO  : 'jtag frequency' command is executed.
+22:25:04 INFO  : Context for processor 'microblaze_0' is selected.
+22:25:04 INFO  : Processor reset is completed for 'microblaze_0'.
+22:25:04 INFO  : Context for processor 'microblaze_0' is selected.
+22:25:04 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+22:25:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+22:25:04 INFO  : Memory regions updated for context MicroBlaze #0
+22:25:04 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+22:25:04 INFO  : Context for processor 'microblaze_0' is selected.
+22:25:04 INFO  : 'con' command is executed.
+22:25:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+22:25:04 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+22:26:13 INFO  : Disconnected from the channel tcfchan#3.
+22:26:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+22:26:14 INFO  : 'fpga -state' command is executed.
+22:26:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:26:14 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+22:26:14 INFO  : 'jtag frequency' command is executed.
+22:26:14 INFO  : Context for processor 'microblaze_0' is selected.
+22:26:14 INFO  : Processor reset is completed for 'microblaze_0'.
+22:26:14 INFO  : Context for processor 'microblaze_0' is selected.
+22:26:14 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+22:26:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+22:26:14 INFO  : Memory regions updated for context MicroBlaze #0
+22:26:14 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+22:26:15 INFO  : Context for processor 'microblaze_0' is selected.
+22:26:15 INFO  : 'con' command is executed.
+22:26:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+22:26:15 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+22:32:04 INFO  : Disconnected from the channel tcfchan#4.
+22:32:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+22:32:12 INFO  : 'fpga -state' command is executed.
+22:32:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:32:12 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+22:32:12 INFO  : 'jtag frequency' command is executed.
+22:32:12 INFO  : Context for processor 'microblaze_0' is selected.
+22:32:12 INFO  : Processor reset is completed for 'microblaze_0'.
+22:32:12 INFO  : Context for processor 'microblaze_0' is selected.
+22:32:12 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+22:32:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+22:32:12 INFO  : Memory regions updated for context MicroBlaze #0
+22:32:12 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+22:32:12 INFO  : Context for processor 'microblaze_0' is selected.
+22:32:12 INFO  : 'con' command is executed.
+22:32:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+22:32:12 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+22:32:41 INFO  : Disconnected from the channel tcfchan#5.
+22:32:42 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+22:32:59 INFO  : Registering command handlers for SDK TCF services
+22:33:00 INFO  : Launching XSCT server: xsct -n -interactive /home/fabio/Desktop/linreg/linreg.sdk/temp_xsdb_launch_script.tcl
+22:33:02 INFO  : XSCT server has started successfully.
+22:33:02 INFO  : Successfully done setting XSCT server connection channel  
+22:33:02 INFO  : Successfully done setting SDK workspace  
+22:33:02 INFO  : Processing command line option -hwspec /home/fabio/Desktop/linreg/linreg.sdk/design_1_wrapper.hdf.
+22:33:02 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+22:33:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:33:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:34:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:34:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+22:34:11 INFO  : FPGA configured successfully with bitstream "/home/fabio/Desktop/linreg/linreg.sdk/design_1_wrapper_hw_platform_0/download.bit"
+22:34:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+22:34:29 INFO  : 'fpga -state' command is executed.
+22:34:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:34:29 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+22:34:29 INFO  : 'jtag frequency' command is executed.
+22:34:29 INFO  : Context for processor 'microblaze_0' is selected.
+22:34:29 INFO  : Processor reset is completed for 'microblaze_0'.
+22:34:29 INFO  : Context for processor 'microblaze_0' is selected.
+22:34:29 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+22:34:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+22:34:29 INFO  : Memory regions updated for context MicroBlaze #0
+22:34:29 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+22:34:29 INFO  : Context for processor 'microblaze_0' is selected.
+22:34:29 INFO  : 'con' command is executed.
+22:34:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+22:34:29 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+22:35:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:35:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+22:35:47 INFO  : FPGA configured successfully with bitstream "/home/fabio/Desktop/linreg/linreg.sdk/design_1_wrapper_hw_platform_0/download.bit"
+22:36:05 INFO  : Disconnected from the channel tcfchan#1.
+22:36:09 ERROR : no targets found with "jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0". available targets:
+  1* xc7a100t
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+22:36:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+22:36:24 INFO  : 'fpga -state' command is executed.
+22:36:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:36:25 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+22:36:25 INFO  : 'jtag frequency' command is executed.
+22:36:25 INFO  : Context for processor 'microblaze_0' is selected.
+22:36:25 INFO  : Processor reset is completed for 'microblaze_0'.
+22:36:25 INFO  : Context for processor 'microblaze_0' is selected.
+22:36:25 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+22:36:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+22:36:25 INFO  : Memory regions updated for context MicroBlaze #0
+22:36:25 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+22:36:25 INFO  : Context for processor 'microblaze_0' is selected.
+22:36:25 INFO  : 'con' command is executed.
+22:36:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+22:36:25 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+23:08:49 INFO  : Disconnected from the channel tcfchan#2.
+23:08:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+23:08:57 INFO  : 'fpga -state' command is executed.
+23:08:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:08:57 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+23:08:57 INFO  : 'jtag frequency' command is executed.
+23:08:58 INFO  : Context for processor 'microblaze_0' is selected.
+23:08:58 INFO  : Processor reset is completed for 'microblaze_0'.
+23:08:58 INFO  : Context for processor 'microblaze_0' is selected.
+23:08:58 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+23:08:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+23:08:58 INFO  : Memory regions updated for context MicroBlaze #0
+23:08:58 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+23:08:58 INFO  : Context for processor 'microblaze_0' is selected.
+23:08:58 INFO  : 'con' command is executed.
+23:08:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+23:08:58 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+23:12:52 INFO  : Disconnected from the channel tcfchan#3.
+23:12:56 ERROR : no targets found with "jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0". available targets:
+  1  xc7a100t
+     2  MicroBlaze Debug Module at USER2
+        3* MicroBlaze #0 (Running)
+23:13:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+23:13:03 INFO  : 'fpga -state' command is executed.
+23:13:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:13:04 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+23:13:04 INFO  : 'jtag frequency' command is executed.
+23:13:04 INFO  : Context for processor 'microblaze_0' is selected.
+23:13:04 INFO  : Processor reset is completed for 'microblaze_0'.
+23:13:04 INFO  : Context for processor 'microblaze_0' is selected.
+23:13:04 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+23:13:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+23:13:04 INFO  : Memory regions updated for context MicroBlaze #0
+23:13:04 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+23:13:04 INFO  : Context for processor 'microblaze_0' is selected.
+23:13:04 INFO  : 'con' command is executed.
+23:13:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+23:13:04 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+23:17:23 INFO  : Disconnected from the channel tcfchan#4.
+23:17:27 ERROR : no targets found with "jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0". available targets:
+  1  xc7a100t
+     2  MicroBlaze Debug Module at USER2
+        3* MicroBlaze #0 (Running)
+23:17:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+23:17:31 INFO  : 'fpga -state' command is executed.
+23:17:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:17:31 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+23:17:31 INFO  : 'jtag frequency' command is executed.
+23:17:31 INFO  : Context for processor 'microblaze_0' is selected.
+23:17:31 INFO  : Processor reset is completed for 'microblaze_0'.
+23:17:31 INFO  : Context for processor 'microblaze_0' is selected.
+23:17:32 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+23:17:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+23:17:32 INFO  : Memory regions updated for context MicroBlaze #0
+23:17:32 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+23:17:32 INFO  : Context for processor 'microblaze_0' is selected.
+23:17:32 INFO  : 'con' command is executed.
+23:17:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+23:17:32 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+23:18:53 INFO  : Disconnected from the channel tcfchan#5.
+23:37:45 INFO  : Registering command handlers for SDK TCF services
+23:37:47 INFO  : Launching XSCT server: xsct -n -interactive /home/fabio/Desktop/linreg/linreg.sdk/temp_xsdb_launch_script.tcl
+23:37:49 INFO  : XSCT server has started successfully.
+23:37:49 INFO  : Successfully done setting XSCT server connection channel  
+23:37:49 INFO  : Successfully done setting SDK workspace  
+23:37:49 INFO  : Processing command line option -hwspec /home/fabio/Desktop/linreg/linreg.sdk/design_1_wrapper.hdf.
+23:37:49 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+23:37:50 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1531262242000,  Project:1531257463000
+23:37:50 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_0' is different from /home/fabio/Desktop/linreg/linreg.sdk/design_1_wrapper.hdf.
+23:37:50 INFO  : Copied contents of /home/fabio/Desktop/linreg/linreg.sdk/design_1_wrapper.hdf into /design_1_wrapper_hw_platform_0/system.hdf.
+23:37:51 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+23:37:52 INFO  : 
+23:37:52 INFO  : Updating hardware inferred compiler options for microblaze.
+23:37:52 INFO  : Clearing existing target manager status.
+23:37:52 WARN  : Given IPC port value is invalid. Using default port 2350
+23:37:52 WARN  : Given XMD timeout value is invalid. Using default value of 50000
+23:37:55 WARN  : Given XMD transaction timeout value is invalid. Using default value of 60000 milli seconds
+23:37:56 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+23:37:56 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+23:38:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:38:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+23:38:17 INFO  : FPGA configured successfully with bitstream "/home/fabio/Desktop/linreg/linreg.sdk/design_1_wrapper_hw_platform_0/download.bit"
+23:39:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+23:39:05 INFO  : 'fpga -state' command is executed.
+23:39:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:39:05 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+23:39:05 INFO  : 'jtag frequency' command is executed.
+23:39:05 INFO  : Context for processor 'microblaze_0' is selected.
+23:39:05 INFO  : Processor reset is completed for 'microblaze_0'.
+23:39:05 INFO  : Context for processor 'microblaze_0' is selected.
+23:39:05 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+23:39:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+23:39:05 INFO  : Memory regions updated for context MicroBlaze #0
+23:39:05 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+23:39:05 INFO  : Context for processor 'microblaze_0' is selected.
+23:39:05 INFO  : 'con' command is executed.
+23:39:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+23:39:05 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+23:40:50 INFO  : Disconnected from the channel tcfchan#1.
+23:40:54 ERROR : no targets found with "jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0". available targets:
+  1  xc7a100t
+     2  MicroBlaze Debug Module at USER2
+        3* MicroBlaze #0 (Running)
+23:41:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+23:41:00 INFO  : 'fpga -state' command is executed.
+23:41:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:41:00 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+23:41:00 INFO  : 'jtag frequency' command is executed.
+23:41:00 INFO  : Context for processor 'microblaze_0' is selected.
+23:41:00 INFO  : Processor reset is completed for 'microblaze_0'.
+23:41:00 INFO  : Context for processor 'microblaze_0' is selected.
+23:41:00 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+23:41:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+23:41:00 INFO  : Memory regions updated for context MicroBlaze #0
+23:41:00 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+23:41:00 INFO  : Context for processor 'microblaze_0' is selected.
+23:41:00 INFO  : 'con' command is executed.
+23:41:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+23:41:00 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+23:41:59 INFO  : Disconnected from the channel tcfchan#2.
+23:42:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+23:42:05 INFO  : 'fpga -state' command is executed.
+23:42:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:42:05 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+23:42:05 INFO  : 'jtag frequency' command is executed.
+23:42:05 INFO  : Context for processor 'microblaze_0' is selected.
+23:42:05 INFO  : Processor reset is completed for 'microblaze_0'.
+23:42:05 INFO  : Context for processor 'microblaze_0' is selected.
+23:42:05 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+23:42:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+23:42:05 INFO  : Memory regions updated for context MicroBlaze #0
+23:42:05 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+23:42:05 INFO  : Context for processor 'microblaze_0' is selected.
+23:42:05 INFO  : 'con' command is executed.
+23:42:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+23:42:05 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+23:43:57 INFO  : Disconnected from the channel tcfchan#3.
+23:44:02 ERROR : no targets found with "jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0". available targets:
+  1  xc7a100t
+     2  MicroBlaze Debug Module at USER2
+        3* MicroBlaze #0 (Running)
+00:28:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:28:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+00:28:58 INFO  : FPGA configured successfully with bitstream "/home/fabio/Desktop/linreg/linreg.sdk/design_1_wrapper_hw_platform_0/download.bit"
+00:29:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+00:29:19 INFO  : 'fpga -state' command is executed.
+00:29:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:29:19 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+00:29:19 INFO  : 'jtag frequency' command is executed.
+00:29:19 INFO  : Context for processor 'microblaze_0' is selected.
+00:29:19 INFO  : Processor reset is completed for 'microblaze_0'.
+00:29:19 INFO  : Context for processor 'microblaze_0' is selected.
+00:29:19 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+00:29:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+00:29:19 INFO  : Memory regions updated for context MicroBlaze #0
+00:29:19 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+00:29:19 INFO  : Context for processor 'microblaze_0' is selected.
+00:29:19 INFO  : 'con' command is executed.
+00:29:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+00:29:19 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+00:29:42 INFO  : Disconnected from the channel tcfchan#4.
+00:29:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+00:29:49 INFO  : 'fpga -state' command is executed.
+00:29:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:29:49 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+00:29:49 INFO  : 'jtag frequency' command is executed.
+00:29:49 INFO  : Context for processor 'microblaze_0' is selected.
+00:29:49 INFO  : Processor reset is completed for 'microblaze_0'.
+00:29:49 INFO  : Context for processor 'microblaze_0' is selected.
+00:29:49 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+00:29:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+00:29:49 INFO  : Memory regions updated for context MicroBlaze #0
+00:29:49 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+00:29:49 INFO  : Context for processor 'microblaze_0' is selected.
+00:29:49 INFO  : 'con' command is executed.
+00:29:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+00:29:49 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+00:30:03 INFO  : Disconnected from the channel tcfchan#5.
+00:30:07 ERROR : no targets found with "jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0". available targets:
+  1  xc7a100t
+     2  MicroBlaze Debug Module at USER2
+        3* MicroBlaze #0 (Running)
+00:30:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+00:30:12 INFO  : 'fpga -state' command is executed.
+00:30:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:30:12 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+00:30:12 INFO  : 'jtag frequency' command is executed.
+00:30:12 INFO  : Context for processor 'microblaze_0' is selected.
+00:30:12 INFO  : Processor reset is completed for 'microblaze_0'.
+00:30:12 INFO  : Context for processor 'microblaze_0' is selected.
+00:30:12 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+00:30:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+00:30:12 INFO  : Memory regions updated for context MicroBlaze #0
+00:30:12 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+00:30:12 INFO  : Context for processor 'microblaze_0' is selected.
+00:30:12 INFO  : 'con' command is executed.
+00:30:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+00:30:12 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+00:30:40 INFO  : Disconnected from the channel tcfchan#6.
+00:30:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+00:30:55 INFO  : 'fpga -state' command is executed.
+00:30:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:30:55 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+00:30:55 INFO  : 'jtag frequency' command is executed.
+00:30:55 INFO  : Context for processor 'microblaze_0' is selected.
+00:30:55 INFO  : Processor reset is completed for 'microblaze_0'.
+00:30:55 INFO  : Context for processor 'microblaze_0' is selected.
+00:30:55 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+00:30:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+00:30:55 INFO  : Memory regions updated for context MicroBlaze #0
+00:30:55 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+00:30:55 INFO  : Context for processor 'microblaze_0' is selected.
+00:30:55 INFO  : 'con' command is executed.
+00:30:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+00:30:55 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+00:32:45 INFO  : Disconnected from the channel tcfchan#7.
+00:32:49 ERROR : no targets found with "jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0". available targets:
+  1  xc7a100t
+     2  MicroBlaze Debug Module at USER2
+        3* MicroBlaze #0 (Running)
+00:32:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+00:32:53 INFO  : 'fpga -state' command is executed.
+00:32:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:32:53 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+00:32:53 INFO  : 'jtag frequency' command is executed.
+00:32:53 INFO  : Context for processor 'microblaze_0' is selected.
+00:32:53 INFO  : Processor reset is completed for 'microblaze_0'.
+00:32:54 INFO  : Context for processor 'microblaze_0' is selected.
+00:32:54 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+00:32:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+00:32:54 INFO  : Memory regions updated for context MicroBlaze #0
+00:32:54 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+00:32:54 INFO  : Context for processor 'microblaze_0' is selected.
+00:32:54 INFO  : 'con' command is executed.
+00:32:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+00:32:54 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+00:36:19 INFO  : Disconnected from the channel tcfchan#8.
+00:36:23 ERROR : no targets found with "jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0". available targets:
+  1  xc7a100t
+     2  MicroBlaze Debug Module at USER2
+        3* MicroBlaze #0 (Running)
+00:36:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+00:36:27 INFO  : 'fpga -state' command is executed.
+00:36:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:36:27 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+00:36:27 INFO  : 'jtag frequency' command is executed.
+00:36:27 INFO  : Context for processor 'microblaze_0' is selected.
+00:36:27 INFO  : Processor reset is completed for 'microblaze_0'.
+00:36:27 INFO  : Context for processor 'microblaze_0' is selected.
+00:36:27 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+00:36:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+00:36:27 INFO  : Memory regions updated for context MicroBlaze #0
+00:36:27 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+00:36:28 INFO  : Context for processor 'microblaze_0' is selected.
+00:36:28 INFO  : 'con' command is executed.
+00:36:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+00:36:28 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+00:37:14 INFO  : Disconnected from the channel tcfchan#9.
+00:37:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+00:37:28 INFO  : 'fpga -state' command is executed.
+00:37:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:37:29 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+00:37:29 INFO  : 'jtag frequency' command is executed.
+00:37:29 INFO  : Context for processor 'microblaze_0' is selected.
+00:37:29 INFO  : Processor reset is completed for 'microblaze_0'.
+00:37:29 INFO  : Context for processor 'microblaze_0' is selected.
+00:37:29 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+00:37:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+00:37:29 INFO  : Memory regions updated for context MicroBlaze #0
+00:37:29 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+00:37:29 INFO  : Context for processor 'microblaze_0' is selected.
+00:37:29 INFO  : 'con' command is executed.
+00:37:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+00:37:29 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+00:45:47 INFO  : Disconnected from the channel tcfchan#10.
+00:45:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+00:45:54 INFO  : 'fpga -state' command is executed.
+00:45:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:45:55 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+00:45:55 INFO  : 'jtag frequency' command is executed.
+00:45:55 INFO  : Context for processor 'microblaze_0' is selected.
+00:45:55 INFO  : Processor reset is completed for 'microblaze_0'.
+00:45:55 INFO  : Context for processor 'microblaze_0' is selected.
+00:45:55 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+00:45:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+00:45:55 INFO  : Memory regions updated for context MicroBlaze #0
+00:45:55 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+00:45:55 INFO  : Context for processor 'microblaze_0' is selected.
+00:45:55 INFO  : 'con' command is executed.
+00:45:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+00:45:55 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+00:48:06 INFO  : Disconnected from the channel tcfchan#11.
+00:48:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+00:48:07 INFO  : 'fpga -state' command is executed.
+00:48:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:48:08 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+00:48:08 INFO  : 'jtag frequency' command is executed.
+00:48:08 INFO  : Context for processor 'microblaze_0' is selected.
+00:48:08 INFO  : Processor reset is completed for 'microblaze_0'.
+00:48:08 INFO  : Context for processor 'microblaze_0' is selected.
+00:48:08 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+00:48:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+00:48:08 INFO  : Memory regions updated for context MicroBlaze #0
+00:48:08 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+00:48:08 INFO  : Context for processor 'microblaze_0' is selected.
+00:48:08 INFO  : 'con' command is executed.
+00:48:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+00:48:08 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+00:51:25 INFO  : Disconnected from the channel tcfchan#12.
+00:51:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+00:51:26 INFO  : 'fpga -state' command is executed.
+00:51:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:51:27 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+00:51:27 INFO  : 'jtag frequency' command is executed.
+00:51:27 INFO  : Context for processor 'microblaze_0' is selected.
+00:51:27 INFO  : Processor reset is completed for 'microblaze_0'.
+00:51:27 INFO  : Context for processor 'microblaze_0' is selected.
+00:51:27 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+00:51:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+00:51:27 INFO  : Memory regions updated for context MicroBlaze #0
+00:51:27 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+00:51:27 INFO  : Context for processor 'microblaze_0' is selected.
+00:51:27 INFO  : 'con' command is executed.
+00:51:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+00:51:27 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+01:02:16 INFO  : Disconnected from the channel tcfchan#13.
+01:02:20 ERROR : no targets found with "jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0". available targets:
+  1  xc7a100t
+     2  MicroBlaze Debug Module at USER2
+        3* MicroBlaze #0 (Running)
+01:02:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+01:02:25 INFO  : 'fpga -state' command is executed.
+01:02:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:02:25 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+01:02:25 INFO  : 'jtag frequency' command is executed.
+01:02:25 INFO  : Context for processor 'microblaze_0' is selected.
+01:02:25 INFO  : Processor reset is completed for 'microblaze_0'.
+01:02:25 INFO  : Context for processor 'microblaze_0' is selected.
+01:02:26 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+01:02:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+01:02:26 INFO  : Memory regions updated for context MicroBlaze #0
+01:02:26 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+01:02:26 INFO  : Context for processor 'microblaze_0' is selected.
+01:02:26 INFO  : 'con' command is executed.
+01:02:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+01:02:26 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+01:20:50 INFO  : Disconnected from the channel tcfchan#14.
+01:20:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+01:20:51 INFO  : 'fpga -state' command is executed.
+01:20:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:20:51 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+01:20:51 INFO  : 'jtag frequency' command is executed.
+01:20:51 INFO  : Context for processor 'microblaze_0' is selected.
+01:20:51 INFO  : Processor reset is completed for 'microblaze_0'.
+01:20:51 INFO  : Context for processor 'microblaze_0' is selected.
+01:20:51 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+01:20:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+01:20:51 INFO  : Memory regions updated for context MicroBlaze #0
+01:20:51 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+01:20:51 INFO  : Context for processor 'microblaze_0' is selected.
+01:20:51 INFO  : 'con' command is executed.
+01:20:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+01:20:51 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+01:21:09 INFO  : Disconnected from the channel tcfchan#15.
+01:21:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+01:21:12 INFO  : 'fpga -state' command is executed.
+01:21:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:21:12 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+01:21:12 INFO  : 'jtag frequency' command is executed.
+01:21:12 INFO  : Context for processor 'microblaze_0' is selected.
+01:21:12 INFO  : Processor reset is completed for 'microblaze_0'.
+01:21:12 INFO  : Context for processor 'microblaze_0' is selected.
+01:21:12 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+01:21:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+01:21:12 INFO  : Memory regions updated for context MicroBlaze #0
+01:21:12 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+01:21:12 INFO  : Context for processor 'microblaze_0' is selected.
+01:21:12 INFO  : 'con' command is executed.
+01:21:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+01:21:12 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+01:21:36 INFO  : Disconnected from the channel tcfchan#16.
+01:21:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+01:21:43 INFO  : 'fpga -state' command is executed.
+01:21:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:21:43 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+01:21:43 INFO  : 'jtag frequency' command is executed.
+01:21:43 INFO  : Context for processor 'microblaze_0' is selected.
+01:21:43 INFO  : Processor reset is completed for 'microblaze_0'.
+01:21:43 INFO  : Context for processor 'microblaze_0' is selected.
+01:21:44 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+01:21:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+01:21:44 INFO  : Memory regions updated for context MicroBlaze #0
+01:21:44 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+01:21:44 INFO  : Context for processor 'microblaze_0' is selected.
+01:21:44 INFO  : 'con' command is executed.
+01:21:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+01:21:44 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+01:22:20 INFO  : Disconnected from the channel tcfchan#17.
+01:34:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+01:34:53 INFO  : 'fpga -state' command is executed.
+01:34:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:34:54 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+01:34:54 INFO  : 'jtag frequency' command is executed.
+01:34:54 INFO  : Context for processor 'microblaze_0' is selected.
+01:34:54 INFO  : Processor reset is completed for 'microblaze_0'.
+01:34:54 INFO  : Context for processor 'microblaze_0' is selected.
+01:34:54 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+01:34:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+01:34:54 INFO  : Memory regions updated for context MicroBlaze #0
+01:34:54 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+01:34:54 INFO  : Context for processor 'microblaze_0' is selected.
+01:34:54 INFO  : 'con' command is executed.
+01:34:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+01:34:54 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+01:36:11 INFO  : Disconnected from the channel tcfchan#18.
+01:36:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+01:36:12 INFO  : 'fpga -state' command is executed.
+01:36:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:36:12 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+01:36:12 INFO  : 'jtag frequency' command is executed.
+01:36:12 INFO  : Context for processor 'microblaze_0' is selected.
+01:36:12 INFO  : Processor reset is completed for 'microblaze_0'.
+01:36:12 INFO  : Context for processor 'microblaze_0' is selected.
+01:36:12 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+01:36:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+01:36:12 INFO  : Memory regions updated for context MicroBlaze #0
+01:36:12 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+01:36:12 INFO  : Context for processor 'microblaze_0' is selected.
+01:36:12 INFO  : 'con' command is executed.
+01:36:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+01:36:12 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+01:41:00 INFO  : Disconnected from the channel tcfchan#19.
+01:41:04 ERROR : no targets found with "jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0". available targets:
+  1  xc7a100t
+     2  MicroBlaze Debug Module at USER2
+        3* MicroBlaze #0 (Running)
+01:41:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+01:41:08 INFO  : 'fpga -state' command is executed.
+01:41:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:41:08 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+01:41:08 INFO  : 'jtag frequency' command is executed.
+01:41:09 INFO  : Context for processor 'microblaze_0' is selected.
+01:41:09 INFO  : Processor reset is completed for 'microblaze_0'.
+01:41:09 INFO  : Context for processor 'microblaze_0' is selected.
+01:41:09 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+01:41:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+01:41:09 INFO  : Memory regions updated for context MicroBlaze #0
+01:41:09 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+01:41:09 INFO  : Context for processor 'microblaze_0' is selected.
+01:41:09 INFO  : 'con' command is executed.
+01:41:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+01:41:09 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+01:54:53 INFO  : Disconnected from the channel tcfchan#20.
+01:54:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+01:54:54 INFO  : 'fpga -state' command is executed.
+01:54:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:54:54 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+01:54:54 INFO  : 'jtag frequency' command is executed.
+01:54:54 INFO  : Context for processor 'microblaze_0' is selected.
+01:54:54 INFO  : Processor reset is completed for 'microblaze_0'.
+01:54:54 INFO  : Context for processor 'microblaze_0' is selected.
+01:54:54 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+01:54:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+01:54:54 INFO  : Memory regions updated for context MicroBlaze #0
+01:54:54 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+01:54:54 INFO  : Context for processor 'microblaze_0' is selected.
+01:54:54 INFO  : 'con' command is executed.
+01:54:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+01:54:54 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+02:05:00 INFO  : Disconnected from the channel tcfchan#21.
+02:05:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+02:05:01 INFO  : 'fpga -state' command is executed.
+02:05:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:05:01 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+02:05:01 INFO  : 'jtag frequency' command is executed.
+02:05:01 INFO  : Context for processor 'microblaze_0' is selected.
+02:05:01 INFO  : Processor reset is completed for 'microblaze_0'.
+02:05:01 INFO  : Context for processor 'microblaze_0' is selected.
+02:05:01 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+02:05:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+02:05:01 INFO  : Memory regions updated for context MicroBlaze #0
+02:05:01 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+02:05:01 INFO  : Context for processor 'microblaze_0' is selected.
+02:05:01 INFO  : 'con' command is executed.
+02:05:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+02:05:01 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+02:07:26 INFO  : Disconnected from the channel tcfchan#22.
+02:07:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+02:07:28 INFO  : 'fpga -state' command is executed.
+02:07:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:07:28 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+02:07:28 INFO  : 'jtag frequency' command is executed.
+02:07:28 INFO  : Context for processor 'microblaze_0' is selected.
+02:07:28 INFO  : Processor reset is completed for 'microblaze_0'.
+02:07:28 INFO  : Context for processor 'microblaze_0' is selected.
+02:07:28 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+02:07:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+02:07:28 INFO  : Memory regions updated for context MicroBlaze #0
+02:07:28 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+02:07:28 INFO  : Context for processor 'microblaze_0' is selected.
+02:07:28 INFO  : 'con' command is executed.
+02:07:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+02:07:28 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+02:08:46 INFO  : Disconnected from the channel tcfchan#23.
+02:08:50 ERROR : no targets found with "jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0". available targets:
+  1  xc7a100t
+     2  MicroBlaze Debug Module at USER2
+        3* MicroBlaze #0 (Running)
+02:08:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+02:08:55 INFO  : 'fpga -state' command is executed.
+02:08:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:08:55 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+02:08:55 INFO  : 'jtag frequency' command is executed.
+02:08:55 INFO  : Context for processor 'microblaze_0' is selected.
+02:08:55 INFO  : Processor reset is completed for 'microblaze_0'.
+02:08:55 INFO  : Context for processor 'microblaze_0' is selected.
+02:08:55 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+02:08:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+02:08:55 INFO  : Memory regions updated for context MicroBlaze #0
+02:08:55 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+02:08:55 INFO  : Context for processor 'microblaze_0' is selected.
+02:08:55 INFO  : 'con' command is executed.
+02:08:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+02:08:55 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+02:13:09 INFO  : Disconnected from the channel tcfchan#24.
+02:13:13 ERROR : no targets found with "jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0". available targets:
+  1  xc7a100t
+     2  MicroBlaze Debug Module at USER2
+        3* MicroBlaze #0 (Running)
+02:13:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+02:13:21 INFO  : 'fpga -state' command is executed.
+02:13:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:13:22 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+02:13:22 INFO  : 'jtag frequency' command is executed.
+02:13:22 INFO  : Context for processor 'microblaze_0' is selected.
+02:13:22 INFO  : Processor reset is completed for 'microblaze_0'.
+02:13:22 INFO  : Context for processor 'microblaze_0' is selected.
+02:13:22 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+02:13:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+02:13:22 INFO  : Memory regions updated for context MicroBlaze #0
+02:13:22 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+02:13:22 INFO  : Context for processor 'microblaze_0' is selected.
+02:13:22 INFO  : 'con' command is executed.
+02:13:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+02:13:22 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+02:14:38 INFO  : Disconnected from the channel tcfchan#25.
+02:14:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+02:14:45 INFO  : 'fpga -state' command is executed.
+02:14:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:14:46 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+02:14:46 INFO  : 'jtag frequency' command is executed.
+02:14:46 INFO  : Context for processor 'microblaze_0' is selected.
+02:14:46 INFO  : Processor reset is completed for 'microblaze_0'.
+02:14:46 INFO  : Context for processor 'microblaze_0' is selected.
+02:14:46 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+02:14:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+02:14:46 INFO  : Memory regions updated for context MicroBlaze #0
+02:14:46 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+02:14:46 INFO  : Context for processor 'microblaze_0' is selected.
+02:14:46 INFO  : 'con' command is executed.
+02:14:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+02:14:46 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+02:15:35 INFO  : Disconnected from the channel tcfchan#26.
+02:15:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+02:15:41 INFO  : 'fpga -state' command is executed.
+02:15:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:15:41 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+02:15:41 INFO  : 'jtag frequency' command is executed.
+02:15:41 INFO  : Context for processor 'microblaze_0' is selected.
+02:15:41 INFO  : Processor reset is completed for 'microblaze_0'.
+02:15:41 INFO  : Context for processor 'microblaze_0' is selected.
+02:15:42 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+02:15:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+02:15:42 INFO  : Memory regions updated for context MicroBlaze #0
+02:15:42 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+02:15:42 INFO  : Context for processor 'microblaze_0' is selected.
+02:15:42 INFO  : 'con' command is executed.
+02:15:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+02:15:42 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+02:17:10 INFO  : Disconnected from the channel tcfchan#27.
+02:17:14 ERROR : no targets found with "jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0". available targets:
+  1  xc7a100t
+     2  MicroBlaze Debug Module at USER2
+        3* MicroBlaze #0 (Running)
+02:17:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4 210274675348A" && level==0} -index 0' command is executed.
+02:17:18 INFO  : 'fpga -state' command is executed.
+02:17:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:17:18 INFO  : Jtag cable 'Digilent Nexys4 210274675348A' is selected.
+02:17:18 INFO  : 'jtag frequency' command is executed.
+02:17:18 INFO  : Context for processor 'microblaze_0' is selected.
+02:17:18 INFO  : Processor reset is completed for 'microblaze_0'.
+02:17:19 INFO  : Context for processor 'microblaze_0' is selected.
+02:17:19 INFO  : The application '/home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf' is downloaded to processor 'microblaze_0'.
+02:17:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+dow /home/fabio/Desktop/linreg/linreg.sdk/microblaze/Debug/microblaze.elf
+----------------End of Script----------------
+
+02:17:19 INFO  : Memory regions updated for context MicroBlaze #0
+02:17:19 INFO  : Memory regions updated for context MicroBlaze Debug Module at USER2
+02:17:19 INFO  : Context for processor 'microblaze_0' is selected.
+02:17:19 INFO  : 'con' command is executed.
+02:17:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4 210274675348A"} -index 0
+con
+----------------End of Script----------------
+
+02:17:19 INFO  : Launch script is exported to file '/home/fabio/Desktop/linreg/linreg.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_microblaze.elf_on_local.tcl'
+02:17:49 INFO  : Disconnected from the channel tcfchan#28.
+02:17:49 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

@@ -1,8 +1,12 @@
-tic
-m = 10;
+clear all; close all; clc;
+
+m = 6;
 n = 2;
 
-theta = [1.01; 2.02];
+theta = [
+    1.01;
+    2.02
+];
 
 X = [
     1, 2.34;
@@ -11,10 +15,6 @@ X = [
     1, 5.81;
     1, 6.12;
     1, 5.01;
-    1, 3.09;
-    1, 4.14;
-    1, 1.48;
-    1, 2.20
 ];
 
 Y = [
@@ -24,15 +24,11 @@ Y = [
     6.35;
     4.73;
     6.77;
-    1.39;
-    5.76;
-    3.27;
-    2.82
 ];
 
-alpha = 0.11;
+alpha = 0.01;
 
-for i = 1:5
+for i = 1:1000
     hypothesis = (X*theta);
     err = hypothesis - Y;
     tmp1 = (X' * err);
@@ -40,13 +36,3 @@ for i = 1:5
     tmp2 = (tmp1 * scalar);
     theta = theta - tmp2
 end
-theta
-
-%scatter(X(:,2), Y);
-%xlabel('X');
-%ylabel('Y');
-%hold on
-
-%x = X(:,2);
-%y = (theta(1) + theta(2)*x);
-%plot(x,y);

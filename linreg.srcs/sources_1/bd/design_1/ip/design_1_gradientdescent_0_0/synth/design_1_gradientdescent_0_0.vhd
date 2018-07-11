@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: user.org:user:gradientdescent:1.0
--- IP Revision: 25
+-- IP Revision: 28
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -132,7 +132,7 @@ BEGIN
       C_S00_AXIS_TDATA_WIDTH => 32,
       C_M00_AXIS_TDATA_WIDTH => 32,
       C_M00_AXIS_START_COUNT => 32,
-      m => 10,
+      m => 6,
       n => 2
     )
     PORT MAP (
