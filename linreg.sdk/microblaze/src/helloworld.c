@@ -45,7 +45,7 @@ void print_float(float Input)
     xil_printf(".%d\r\n", frac_part);
 }
 
-// Copyright (c) 2018 Ricardo J. Jesus
+// Thanks to Ricardo J. Jesus
 char *print_long_long(long long x)
 {
 	static char buf[21];
@@ -65,7 +65,7 @@ void toc()
 	int period = 50; // one clock cycle in nanoseconds
 	int cycles = 100000; // an event is generated every 100000 cycles
 	long long res = ((long long)period)*irqCount*cycles;
-	xil_printf("\nElapsed time is estimated to be %s ns = %d timer events", print_long_long(res), irqCount);
+	xil_printf("\nElapsed time is estimated to be %s ns (%d timer events)", print_long_long(res), irqCount);
 }
 
 // Will be called at every timer output event
@@ -112,7 +112,7 @@ int SetupInterrupts(u32 IntcBaseAddress)
 	return XST_SUCCESS;
 }
 
-void linreg_software(int X[CONSTANT_M][CONSTANT_N], int Y[], int T[], int alpha, int m, int n)
+int linreg_software(int X[CONSTANT_M][CONSTANT_N], int Y[], int T[], int alpha, int m, int n)
 {
 	int scalar;
 	int hypothesis[m];
@@ -191,11 +191,10 @@ void linreg_software(int X[CONSTANT_M][CONSTANT_N], int Y[], int T[], int alpha,
 		if(has_converged(T, Told, n, CONSTANT_THRESHOLD)) break;
 	}
 
-	print_model(T, n);
-	xil_printf(" Algorithm converged in %d iterations.", iter);
+	return iter;
 }
 
-void linreg_hardware(int X[CONSTANT_M][CONSTANT_N], int Y[], int T[], int alpha, int m, int n)
+int linreg_hardware(int X[CONSTANT_M][CONSTANT_N], int Y[], int T[], int alpha, int m, int n)
 {
 	// Reset processor
 	reset();
@@ -242,8 +241,7 @@ void linreg_hardware(int X[CONSTANT_M][CONSTANT_N], int Y[], int T[], int alpha,
 	// Reset processor
 	reset();
 
-	print_model(T, n);
-	xil_printf(" Algorithm converged in %d iterations.", iter);
+	return iter;
 }
 
 int main()
@@ -275,7 +273,7 @@ int main()
 			6.77*SCALING_FACTOR
     };
 
-    int T[CONSTANT_N] = {
+    int T1[CONSTANT_N] = {
 			1.01*SCALING_FACTOR,
 			2.02*SCALING_FACTOR
 	};
@@ -287,8 +285,11 @@ int main()
     xil_printf("\n=====================================================\n");
 
     tic();
-    linreg_software(X, Y, T, alpha, CONSTANT_M, CONSTANT_N);
+    int iter1 = linreg_software(X, Y, T1, alpha, CONSTANT_M, CONSTANT_N);
     toc();
+    print_model(T1, CONSTANT_N);
+	xil_printf("\nAlgorithm converged in %d iterations.", iter1);
+
 
     xil_printf("\n\n=====================================================");
 	xil_printf("\n=            HARDWARE IMPLEMENTATION");
@@ -300,8 +301,11 @@ int main()
 	};
 
     tic();
-    linreg_hardware(X, Y, T2, alpha, CONSTANT_M, CONSTANT_N);
+    int iter2 = linreg_hardware(X, Y, T2, alpha, CONSTANT_M, CONSTANT_N);
     toc();
+    print_model(T2, CONSTANT_N);
+    xil_printf("\nAlgorithm converged in %d iterations.", iter2);
+
 
     cleanup_platform();
     return 0;

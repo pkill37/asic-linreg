@@ -20,6 +20,7 @@
 #define CONSTANT_N 2
 #define SCALING_FACTOR 2048
 #define CONSTANT_THRESHOLD 1
+#define CONSTANT_GRADIENT_DESCENT_ITERATIONS 1000
 
 static int irqCount = 0;
 
@@ -44,7 +45,7 @@ void print_float(float Input)
     xil_printf(".%d\r\n", frac_part);
 }
 
-// Copyright (c) 2018 Ricardo J. Jesus
+// Thanks to Ricardo J. Jesus
 char *print_long_long(long long x)
 {
 	static char buf[21];
@@ -64,7 +65,7 @@ void toc()
 	int period = 50; // one clock cycle in nanoseconds
 	int cycles = 100000; // an event is generated every 100000 cycles
 	long long res = ((long long)period)*irqCount*cycles;
-	xil_printf("\nElapsed time is estimated to be %s ns (%d interrupts)", print_long_long(res), irqCount);
+	xil_printf("\nElapsed time is estimated to be %s ns (%d timer events generated every %d-th clock cycle with a period of 50ns)", print_long_long(res), irqCount);
 }
 
 // Will be called at every timer output event
@@ -111,28 +112,8 @@ int SetupInterrupts(u32 IntcBaseAddress)
 	return XST_SUCCESS;
 }
 
-void linreg_software(int X[CONSTANT_M][CONSTANT_N], int Y[], int T[], int alpha, int m, int n)
+int linreg_software(int X[CONSTANT_M][CONSTANT_N], int Y[], int T[], int alpha, int m, int n)
 {
-	xil_printf("X Matrix\n");
-	for(int i = 0; i < m; i++){
-		for(int j = 0; j < n; j++){
-			xil_printf("%d  ", X[i][j]);
-		}
-		xil_printf("\n");
-	}
-
-	xil_printf("Y Matrix\n");
-	for(int i = 0; i < m; i++){
-		xil_printf("%d\n", Y[i]);
-	}
-
-	xil_printf("Initial Theta\n");
-	for(int i = 0; i<CONSTANT_N; i++){
-		xil_printf("%d\n", T[i]);
-	}
-
-	xil_printf("Alpha: %d\n", alpha);
-
 	int scalar;
 	int hypothesis[m];
 	//fill array
@@ -140,21 +121,21 @@ void linreg_software(int X[CONSTANT_M][CONSTANT_N], int Y[], int T[], int alpha,
 		hypothesis[i]=0;
 	}
 
-	int err[CONSTANT_M];
+	int err[m];
 	//fill array
-	for(int i = 0; i < CONSTANT_M; i++){
+	for(int i = 0; i < m; i++){
 		err[i] = 0;
 	}
 
-	int tmp1[CONSTANT_N];
+	int tmp1[n];
 	//fill array
-	for(int i = 0; i < CONSTANT_N; i++){
+	for(int i = 0; i < n; i++){
 		tmp1[i] = 0;
 	}
 
-	int tmp2[CONSTANT_N];
+	int tmp2[n];
 	//fill array
-	for(int i = 0; i < CONSTANT_N; i++){
+	for(int i = 0; i < n; i++){
 		tmp2[i]=0;
 	}
 
@@ -166,7 +147,9 @@ void linreg_software(int X[CONSTANT_M][CONSTANT_N], int Y[], int T[], int alpha,
 		}
 	}
 
-	for(int i = 0; i < 321; i++) {
+	int iter;
+	for(iter = 0; iter < CONSTANT_GRADIENT_DESCENT_ITERATIONS; iter++)
+	{
 		//X*theta
 		for(int i = 0; i < m; i++){
 			for(int j = 0; j < n; j++){
@@ -199,18 +182,19 @@ void linreg_software(int X[CONSTANT_M][CONSTANT_N], int Y[], int T[], int alpha,
 		}
 
 		//theta - tmp2
+		int Told[n];
 		for(int i = 0; i < n; i++){
+			Told[i] = T[i];
 			T[i] = T[i] - tmp2[i];
 		}
+
+		if(has_converged(T, Told, n, CONSTANT_THRESHOLD)) break;
 	}
 
-	xil_printf("Final thetas\n");
-	for(int i = 0; i < n; i++){
-		xil_printf("%d\n", T[i]);
-	}
+	return iter;
 }
 
-void linreg_hardware(int X[CONSTANT_M][CONSTANT_N], int Y[], int T[], int alpha, int m, int n)
+int linreg_hardware(int X[CONSTANT_M][CONSTANT_N], int Y[], int T[], int alpha, int m, int n)
 {
 	// Reset processor
 	reset();
@@ -237,9 +221,9 @@ void linreg_hardware(int X[CONSTANT_M][CONSTANT_N], int Y[], int T[], int alpha,
 
 	// Run gradient descent for linear regression until the algorithm converges
 	int iter;
-	for (iter = 1; iter < 1000; iter++) {
+	for (iter = 0; iter < CONSTANT_GRADIENT_DESCENT_ITERATIONS; iter++) {
 		// Issue new iteration of gradient descent
-		compute(iter);
+		compute(iter+1);
 
 		// Retrieve new theta vector
 		int Tnew[n];
@@ -251,14 +235,13 @@ void linreg_hardware(int X[CONSTANT_M][CONSTANT_N], int Y[], int T[], int alpha,
 		}
 
 		// Check if algorithm has converged
-		if(has_converged(Tnew, Told, CONSTANT_N, CONSTANT_THRESHOLD)) break;
+		if(has_converged(Tnew, Told, n, CONSTANT_THRESHOLD)) break;
 	}
 
 	// Reset processor
 	reset();
 
-	xil_printf("\n\nAlgorithm converged in %d iterations.", iter);
-	print_model(T, n);
+	return iter;
 }
 
 int main()
@@ -271,7 +254,6 @@ int main()
 		cleanup_platform();
 		return XST_FAILURE;
 	}
-	xil_printf("Setup interrupts successful\r\n");
 
     int X[CONSTANT_M][CONSTANT_N] = {
     		{1*SCALING_FACTOR, 2.34*SCALING_FACTOR},
@@ -291,20 +273,37 @@ int main()
 			6.77*SCALING_FACTOR
     };
 
-    int T[CONSTANT_N] = {
-    		1.01*SCALING_FACTOR,
+    int T1[CONSTANT_N] = {
+			1.01*SCALING_FACTOR,
 			2.02*SCALING_FACTOR
-    };
+	};
 
     int alpha = 0.01*SCALING_FACTOR;
 
+    xil_printf("\n\n=====================================================");
+    xil_printf("\n=            SOFTWARE IMPLEMENTATION");
+    xil_printf("\n=====================================================\n");
+
     tic();
-    linreg_software(X, Y, T, alpha, CONSTANT_M, CONSTANT_N);
+    int iter1 = linreg_software(X, Y, T1, alpha, CONSTANT_M, CONSTANT_N);
+    print_model(T1, CONSTANT_N);
+	xil_printf(" Algorithm converged in %d iterations.", iter1);
     toc();
 
-    //tic();
-    //linreg_hardware(X, Y, T, alpha, CONSTANT_M, CONSTANT_N);
-    //toc();
+    xil_printf("\n\n=====================================================");
+	xil_printf("\n=            HARDWARE IMPLEMENTATION");
+	xil_printf("\n=====================================================\n");
+
+	int T2[CONSTANT_N] = {
+			1.01*SCALING_FACTOR,
+			2.02*SCALING_FACTOR
+	};
+
+    tic();
+    int iter2 = linreg_hardware(X, Y, T2, alpha, CONSTANT_M, CONSTANT_N);
+    print_model(T2, CONSTANT_N);
+    xil_printf(" Algorithm converged in %d iterations.", iter2);
+    toc();
 
     cleanup_platform();
     return 0;
