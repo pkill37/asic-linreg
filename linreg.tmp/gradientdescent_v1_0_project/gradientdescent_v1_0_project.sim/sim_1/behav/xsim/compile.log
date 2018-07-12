@@ -1,0 +1,13 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/fabio/Desktop/linreg/ip_repo/gradientdescent_1.0/src/Types.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/fabio/Desktop/linreg/ip_repo/gradientdescent_1.0/src/matrix_multiply_by_vector.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity matrix_multiply_by_vector
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/fabio/Desktop/linreg/ip_repo/gradientdescent_1.0/src/vector_subtract.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity vector_subtract
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/fabio/Desktop/linreg/ip_repo/gradientdescent_1.0/src/matrix_transpose.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity matrix_transpose
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/fabio/Desktop/linreg/ip_repo/gradientdescent_1.0/src/vector_multiply_by_scalar.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity vector_multiply_by_scalar
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/fabio/Desktop/linreg/ip_repo/gradientdescent_1.0/src/MiniBatchGradientDescent.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MiniBatchGradientDescent
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/fabio/Desktop/linreg/ip_repo/gradientdescent_1.0/src/gradientdescent_testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MiniBatchGradientDescentTest

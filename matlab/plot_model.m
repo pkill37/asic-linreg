@@ -18,7 +18,9 @@ Y = [
     6.77;
 ];
 
-theta = [2217; 1586]/2048;
+theta = [1889; 3231]/2048; % 2 iterations
+theta = [1644; 1945]/2048; % 10 iterations
+theta = [2217; 1586]/2048; % convergence
 
 scatter(X(:,2), Y);
 xlabel('X');

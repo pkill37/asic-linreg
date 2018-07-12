@@ -1,0 +1,25 @@
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2017.4/bin/unwrapped/lnx64.o/xelab -wto eb9565b94e5444c487e8d426df5c6337 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot MiniBatchGradientDescentTest_behav xil_defaultlib.MiniBatchGradientDescentTest -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.types
+Compiling architecture behavioral of entity xil_defaultlib.matrix_multiply_by_vector [\matrix_multiply_by_vector(m=6,n...]
+Compiling architecture behavioral of entity xil_defaultlib.vector_subtract [\vector_subtract(m=6)\]
+Compiling architecture behavioral of entity xil_defaultlib.matrix_transpose [\matrix_transpose(m=6,n=2)\]
+Compiling architecture behavioral of entity xil_defaultlib.matrix_multiply_by_vector [\matrix_multiply_by_vector(m=2,n...]
+Compiling architecture behavioral of entity xil_defaultlib.vector_multiply_by_scalar [\vector_multiply_by_scalar(m=2)\]
+Compiling architecture behavioral of entity xil_defaultlib.vector_subtract [\vector_subtract(m=2)\]
+Compiling architecture behavioral of entity xil_defaultlib.MiniBatchGradientDescent [\MiniBatchGradientDescent(m=6,n=...]
+Compiling architecture stimulus of entity xil_defaultlib.minibatchgradientdescenttest
+Built simulation snapshot MiniBatchGradientDescentTest_behav
