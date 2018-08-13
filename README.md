@@ -26,7 +26,7 @@ The software running on the MicroBlaze processor checks if the algorithm has con
 
 ## Timing Performance
 
-A fixed interval timer is configured to fire events every 100000-th clock cycle. The MicroBlaze processor is interrupted on each one of these events, upon which an interrupt handler is called to increment a global counter irqCount.
+A fixed interval timer is configured to fire events every 100000-th clock cycle. The MicroBlaze processor is interrupted on each one of these events, upon which an interrupt handler is called to increment a global counter `irqCount`.
 
 We can reset this counter when we want to start timing some task and simply look at the counter when we know said task has finished.
 
