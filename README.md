@@ -20,7 +20,7 @@ This results in a fairly clean, stateless implementation of the coprocessor's sl
 
 ### MicroBlaze processor
 
-The MicroBlaze processor sends the coprocessor instructions (according to the instruction set) to store each element of the matrix X, vector Y, learning rate α, and parameters θ. After this, in a loop, it instructs the coprocessor to compute iterations of gradient descent.
+The MicroBlaze processor sends the coprocessor instructions (according to the instruction set) to store each element of the matrix X, vector Y, learning rate α, and parameters θ. After this, in a loop, it instructs the coprocessor to run iterations of gradient descent.
 
 The software running on the MicroBlaze processor checks if the algorithm has converged on every iteration. A useful (but not totally accurate) approximation to declare convergence is: when the difference between the updated θ vector and the previous θ vector is below a certain threshold, then the algorithm has converged, otherwise, it hasn’t.
 
